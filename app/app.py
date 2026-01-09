@@ -32,7 +32,6 @@ def init_db():
 
     conn = get_db_connection()
     cur = conn.cursor()
-
     for path in ["db/schema.sql", "db/triggers.sql", "db/views.sql"]:
         with open(path, "r") as f:
             sql = f.read()
@@ -92,16 +91,19 @@ def admin_required(f):
         return f(*args, **kwargs)
     return decorated_function
 
+
 @app.route("/login", methods=["GET","POST"])
 def login():
     if request.method == "POST":
         username = request.form["username"]
         password = request.form["password"]
+
         conn = get_db_connection()
         cur = conn.cursor(cursor_factory=RealDictCursor)
         cur.execute("SELECT * FROM users WHERE username=%s", (username,))
         user = cur.fetchone()
 
+        is_admin = False
         if user:
             cur.execute("""
                 SELECT CASE
@@ -114,7 +116,9 @@ def login():
                 LEFT JOIN regular_users r ON u.id = r.id
                 WHERE u.id = %s
             """, (user["id"],))
-            user_type = cur.fetchone()["user_type"]
+            user_type_row = cur.fetchone()
+            if user_type_row and user_type_row["user_type"] == "ADMIN":
+                is_admin = True
 
         cur.close()
         conn.close()
@@ -122,7 +126,7 @@ def login():
         if user and check_password_hash(user["password"], password):
             session["user_id"] = user["id"]
             session["username"] = user["username"]
-            session["is_admin"] = (user_type == "ADMIN")
+            session["is_admin"] = is_admin
             return redirect(url_for("index"))
         else:
             return "Invalid credentials", 401
@@ -151,6 +155,7 @@ def add_user():
     conn.close()
     return redirect(url_for("users"))
 
+
 @app.route("/users/delete/<int:user_id>", methods=["POST"])
 @admin_required
 def delete_user(user_id):
@@ -162,11 +167,13 @@ def delete_user(user_id):
     conn.close()
     return redirect(url_for("users"))
 
+
 @app.route("/")
 def index():
     if "user_id" not in session:
         return redirect(url_for("login"))
     return render_template("index.html")
+
 
 @app.route("/users")
 def users():
@@ -180,6 +187,7 @@ def users():
     conn.close()
     return render_template("users.html", users=users_list)
 
+
 @app.route("/roles")
 def roles():
     if "user_id" not in session:
@@ -192,6 +200,7 @@ def roles():
     conn.close()
     return render_template("roles.html", roles=roles_list)
 
+
 @app.route("/audit")
 def audit():
     if "user_id" not in session:
@@ -203,6 +212,7 @@ def audit():
     cur.close()
     conn.close()
     return render_template("audit.html", logs=logs)
+
 
 if __name__ == "__main__":
     init_db()
