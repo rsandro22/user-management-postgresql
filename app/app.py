@@ -33,31 +33,30 @@ def init_db():
     conn = get_db_connection()
     cur = conn.cursor()
 
-    def execute_sql_file_safely(path):
+    for path in ["db/schema.sql", "db/triggers.sql", "db/views.sql"]:
         with open(path, "r") as f:
-            sql_blocks = f.read().split(';')
-        for block in sql_blocks:
-            if block.strip():
-                try:
-                    cur.execute(block)
-                except (psycopg2.errors.DuplicateTable,
-                        psycopg2.errors.DuplicateFunction,
-                        psycopg2.errors.DuplicateObject,
-                        psycopg2.errors.DuplicateColumn):
-                    conn.rollback()
-                except Exception as e:
-                    conn.rollback()
-                    print(f"Skipping SQL block from {path} due to:", e)
-
-    execute_sql_file_safely("db/schema.sql")
-    execute_sql_file_safely("db/triggers.sql")
-    execute_sql_file_safely("db/views.sql")
+            sql = f.read()
+        try:
+            cur.execute(sql)
+        except (psycopg2.errors.DuplicateTable,
+                psycopg2.errors.DuplicateFunction,
+                psycopg2.errors.DuplicateObject,
+                psycopg2.errors.DuplicateColumn,
+                psycopg2.errors.DuplicateType):
+            conn.rollback()
+            print(f"Skipping existing objects in {path}")
+        except Exception as e:
+            conn.rollback()
+            print(f"Error executing {path}:", e)
 
     roles = [("Admin","Administrator role"), ("Regular","Regular user role")]
     for name, desc in roles:
         try:
-            cur.execute("INSERT INTO roles(name, description) VALUES (%s,%s)", (name, desc))
-        except psycopg2.errors.UniqueViolation:
+            cur.execute(
+                "INSERT INTO roles(name, description) VALUES (%s,%s) ON CONFLICT DO NOTHING",
+                (name, desc)
+            )
+        except Exception:
             conn.rollback()
 
     users = [
@@ -72,7 +71,7 @@ def init_db():
                 "INSERT INTO users(username,email,password) VALUES (%s,%s,%s) ON CONFLICT (username) DO NOTHING",
                 (username,email,hashed)
             )
-        except psycopg2.errors.UniqueViolation:
+        except Exception:
             conn.rollback()
 
     cur.execute("""
