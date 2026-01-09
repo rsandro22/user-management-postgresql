@@ -1,11 +1,17 @@
 import os
+import getpass
 
 class Config:
     DB_NAME = "user_management"
-    DB_USER = os.getenv("DB_USER", "postgres")
-    DB_PASSWORD = os.getenv("DB_PASSWORD", "your_password")
-    DB_HOST = os.getenv("DB_HOST", "localhost")
-    DB_PORT = os.getenv("DB_PORT", "5432")
+    DB_USER = "postgres"
+    DB_PASSWORD = None
+    DB_HOST = "localhost"
+    DB_PORT = "5432"
+    
+    def __init__(self):
+        # Pitaj za password samo ako nije setovan
+        if not Config.DB_PASSWORD:
+            Config.DB_PASSWORD = getpass.getpass("Enter PostgreSQL password: ")
     
     @property
     def DATABASE_URL(self):
