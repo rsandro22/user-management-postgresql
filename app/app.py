@@ -4,6 +4,11 @@ from psycopg2.extras import RealDictCursor
 from config import Config
 
 app = Flask(__name__)
+from flask import session, redirect, url_for, request
+from werkzeug.security import generate_password_hash, check_password_hash
+
+app.secret_key = "tajni_kljuc_za_session" 
+
 config = Config()
 
 def get_db_connection():
@@ -13,6 +18,33 @@ def get_db_connection():
 @app.route('/')
 def index():
     return render_template('index.html')
+
+@app.route("/login", methods=["GET", "POST"])
+def login():
+    if request.method == "POST":
+        username = request.form["username"]
+        password = request.form["password"]
+        conn = get_db_connection()
+        cur = conn.cursor(cursor_factory=RealDictCursor)
+        cur.execute("SELECT * FROM users WHERE username=%s", (username,))
+        user = cur.fetchone()
+        cur.close()
+        conn.close()
+
+        if user and check_password_hash(user["password"], password):
+            session["user_id"] = user["id"]
+            session["username"] = user["username"]
+            return redirect(url_for("index"))
+        else:
+            return "Invalid credentials", 401
+
+    return render_template("login.html")
+
+@app.route("/logout")
+def logout():
+    session.clear()
+    return redirect(url_for("login"))
+
 
 @app.route('/users')
 def users():
