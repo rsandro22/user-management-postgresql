@@ -1,7 +1,7 @@
 CREATE OR REPLACE VIEW user_overview AS
 SELECT 
     u.id, u.username, u.email, u.created_at,
-    STRING_AGG(r.name, ', ') AS roles
+    STRING_AGG(r.name, ',') AS roles
 FROM users u
 LEFT JOIN user_roles ur ON u.id = ur.user_id
 LEFT JOIN roles r ON ur.role_id = r.id
@@ -17,8 +17,7 @@ SELECT
     r.id,
     r.name AS role_name,
     r.description,
-    STRING_AGG(p.name, ', ') AS permissions
+    STRING_AGG(rp.permission, ', ') AS permissions
 FROM roles r
 LEFT JOIN role_permissions rp ON r.id = rp.role_id
-LEFT JOIN permissions p ON rp.permission_id = p.id
 GROUP BY r.id;
