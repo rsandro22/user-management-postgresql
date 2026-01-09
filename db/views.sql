@@ -1,10 +1,16 @@
-CREATE VIEW user_overview AS
-SELECT
+CREATE OR REPLACE VIEW user_overview AS
+SELECT 
     id,
     username,
     email,
-    created_at
-FROM users;
+    created_at,
+    CASE
+        WHEN EXISTS (SELECT 1 FROM admin_users a WHERE a.id = u.id) THEN 'ADMIN'
+        WHEN EXISTS (SELECT 1 FROM regular_users r WHERE r.id = u.id) THEN 'REGULAR'
+        ELSE 'UNKNOWN'
+    END AS user_type
+FROM users u;
+
 
 
 CREATE VIEW audit_overview AS
