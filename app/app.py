@@ -6,7 +6,7 @@ from functools import wraps
 
 DB_NAME = "user_management"
 DB_USER = "postgres"
-DB_PASSWORD = "postgres" 
+DB_PASSWORD = "bmw320xd" 
 DB_HOST = "localhost"
 DB_PORT = "5432"
 
