@@ -182,15 +182,23 @@ def add_user():
     return redirect(url_for("users"))
 
 @app.route("/users/delete/<int:user_id>", methods=["POST"])
-@permission_required("DELETE_USER")
+@admin_required
 def delete_user(user_id):
     conn = get_db_connection()
     cur = conn.cursor()
-    cur.execute("DELETE FROM users WHERE id=%s", (user_id,))
+
+    if user_id == session["user_id"]:
+        cur.close()
+        conn.close()
+        return "Ne možeš obrisati sam sebe", 400
+
+    cur.execute("DELETE FROM users WHERE id = %s", (user_id,))
+
     conn.commit()
     cur.close()
     conn.close()
     return redirect(url_for("users"))
+
 
 @app.route("/roles")
 def roles():
