@@ -38,22 +38,15 @@ def init_db():
             sql = f.read()
         try:
             cur.execute(sql)
-        except (psycopg2.errors.DuplicateTable,
-                psycopg2.errors.DuplicateFunction,
-                psycopg2.errors.DuplicateObject,
-                psycopg2.errors.DuplicateColumn,
-                psycopg2.errors.DuplicateType):
-            conn.rollback()
-            print(f"Skipping existing objects in {path}")
         except Exception as e:
             conn.rollback()
-            print(f"Error executing {path}:", e)
+            print(f"Skipping objects in {path} due to existing objects or error:", e)
 
     roles = [("Admin","Administrator role"), ("Regular","Regular user role")]
     for name, desc in roles:
         try:
             cur.execute(
-                "INSERT INTO roles(name, description) VALUES (%s,%s) ON CONFLICT DO NOTHING",
+                "INSERT INTO roles(name, description) VALUES (%s,%s) ON CONFLICT (name) DO NOTHING",
                 (name, desc)
             )
         except Exception:
@@ -74,16 +67,20 @@ def init_db():
         except Exception:
             conn.rollback()
 
-    cur.execute("""
-        INSERT INTO admin_users(id, admin_level)
-        SELECT id, 10 FROM users WHERE username='superadmin'
-        ON CONFLICT (id) DO NOTHING
-    """)
+    try:
+        cur.execute("""
+            INSERT INTO admin_users(id, admin_level)
+            SELECT id, 10 FROM users WHERE username='superadmin'
+            ON CONFLICT (id) DO NOTHING
+        """)
+    except Exception:
+        conn.rollback()
 
     conn.commit()
     cur.close()
     conn.close()
     print("Database initialized successfully!")
+
 
 def admin_required(f):
     @wraps(f)
