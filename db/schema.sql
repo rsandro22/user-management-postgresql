@@ -34,3 +34,15 @@ CREATE TABLE role_permissions (
     permission access_right,
     PRIMARY KEY (role_id, permission)
 );
+
+
+INSERT INTO roles(name, description) VALUES ('Admin', 'Administrator role');
+INSERT INTO roles(name, description) VALUES ('Regular', 'Regular user role');
+
+INSERT INTO users(username, email) VALUES ('admin', 'admin@example.com');
+INSERT INTO admin_users(username, email, admin_level) VALUES ('superadmin', 'superadmin@example.com', 10);
+INSERT INTO regular_users(username, email, reputation) VALUES ('john', 'john@example.com', 5);
+
+INSERT INTO role_permissions(role_id, permission) VALUES
+(1, 'READ'), (1, 'WRITE'), (1, 'DELETE'),
+(2, 'READ');
