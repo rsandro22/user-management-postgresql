@@ -1,38 +1,19 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Roles Overview</title>
-    <style>
-        body { font-family: Arial, sans-serif; padding: 20px; }
-        table { border-collapse: collapse; width: 100%; }
-        th, td { border: 1px solid #ddd; padding: 8px; }
-        th { background-color: #f2f2f2; }
-        a { margin-right: 20px; text-decoration: none; }
-    </style>
-</head>
+<head><meta charset="UTF-8"><title>Roles</title></head>
 <body>
-    <h1>Roles Overview</h1>
-    <nav>
-        <a href="/">Home</a>
-        <a href="/users">Users</a>
-        <a href="/audit">Audit Log</a>
-    </nav>
-    <table>
-        <tr>
-            <th>ID</th>
-            <th>Role Name</th>
-            <th>Description</th>
-            <th>Permissions</th>
-        </tr>
-        {% for role in roles %}
-        <tr>
-            <td>{{ role.id }}</td>
-            <td>{{ role.role_name }}</td>
-            <td>{{ role.description }}</td>
-            <td>{{ role.permissions }}</td>
-        </tr>
-        {% endfor %}
-    </table>
+<h1>Roles</h1>
+<nav><a href="/">Home</a> <a href="/users">Users</a> <a href="/audit">Audit</a> <a href="/logout">Logout</a></nav>
+<table border="1">
+<tr><th>ID</th><th>Name</th><th>Description</th><th>Permissions</th></tr>
+{% for role in roles %}
+<tr>
+<td>{{ role.id }}</td>
+<td>{{ role.role_name }}</td>
+<td>{{ role.description }}</td>
+<td>{{ role.permissions }}</td>
+</tr>
+{% endfor %}
+</table>
 </body>
 </html>
