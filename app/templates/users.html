@@ -7,14 +7,14 @@
 <body>
 <h1>Users</h1>
 <nav>
-<a href="/">Home</a> 
-<a href="/roles">Roles</a> 
-<a href="/audit">Audit</a> 
-<a href="/logout">Logout</a>
+    <a href="/">Home</a> 
+    <a href="/roles">Roles</a> 
+    <a href="/audit">Audit</a> 
+    <a href="/logout">Logout</a>
 </nav>
 
-{% if session["is_admin"] %}
-<h2>Add User (Admin only)</h2>
+{% if 'ADD_USER' in session.get('permissions', []) %}
+<h2>Add User</h2>
 <form action="/users/add" method="post">
     Username: <input type="text" name="username" required>
     Email: <input type="email" name="email" required>
@@ -25,23 +25,23 @@
 
 <table border="1">
 <tr>
-<th>ID</th><th>Username</th><th>Email</th><th>Created</th><th>Type</th>
-{% if session["is_admin"] %}<th>Actions</th>{% endif %}
+    <th>ID</th><th>Username</th><th>Email</th><th>Created</th><th>Type</th>
+    {% if 'DELETE_USER' in session.get('permissions', []) %}<th>Actions</th>{% endif %}
 </tr>
 {% for user in users %}
 <tr>
-<td>{{ user.id }}</td>
-<td>{{ user.username }}</td>
-<td>{{ user.email }}</td>
-<td>{{ user.created_at }}</td>
-<td>{{ user.user_type }}</td>
-{% if session["is_admin"] %}
-<td>
-<form action="/users/delete/{{ user.id }}" method="post">
-<button type="submit">Delete</button>
-</form>
-</td>
-{% endif %}
+    <td>{{ user.id }}</td>
+    <td>{{ user.username }}</td>
+    <td>{{ user.email }}</td>
+    <td>{{ user.created_at }}</td>
+    <td>{{ user.user_type }}</td>
+    {% if 'DELETE_USER' in session.get('permissions', []) %}
+    <td>
+        <form action="/users/delete/{{ user.id }}" method="post">
+            <button type="submit">Delete</button>
+        </form>
+    </td>
+    {% endif %}
 </tr>
 {% endfor %}
 </table>
