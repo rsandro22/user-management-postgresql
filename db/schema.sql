@@ -1,10 +1,12 @@
+CREATE TYPE access_right AS ENUM ('READ','WRITE','DELETE','ADD_USER','DELETE_USER');
 
-DO $$
-BEGIN
-    IF NOT EXISTS (SELECT 1 FROM pg_type WHERE typname = 'access_right') THEN
-        CREATE TYPE access_right AS ENUM ('READ','WRITE','DELETE');
-    END IF;
-END$$;
+CREATE TABLE IF NOT EXISTS users (
+    id SERIAL PRIMARY KEY,
+    username TEXT UNIQUE NOT NULL,
+    email TEXT UNIQUE NOT NULL,
+    password TEXT NOT NULL,
+    created_at TIMESTAMP DEFAULT now()
+);
 
 CREATE TABLE IF NOT EXISTS roles (
     id SERIAL PRIMARY KEY,
@@ -12,25 +14,19 @@ CREATE TABLE IF NOT EXISTS roles (
     description TEXT
 );
 
-CREATE TABLE IF NOT EXISTS users (
+CREATE TABLE IF NOT EXISTS permissions (
     id SERIAL PRIMARY KEY,
-    username TEXT UNIQUE NOT NULL,
-    email TEXT UNIQUE NOT NULL,
-    created_at TIMESTAMP DEFAULT now(),
-    metadata JSONB,
-    password TEXT
+    name TEXT UNIQUE NOT NULL
 );
 
-CREATE TABLE IF NOT EXISTS admin_users (
-    admin_level INT NOT NULL
-) INHERITS (users);
-
-CREATE TABLE IF NOT EXISTS regular_users (
-    reputation INT DEFAULT 0
-) INHERITS (users);
+CREATE TABLE IF NOT EXISTS user_roles (
+    user_id INT REFERENCES users(id) ON DELETE CASCADE,
+    role_id INT REFERENCES roles(id) ON DELETE CASCADE,
+    PRIMARY KEY(user_id, role_id)
+);
 
 CREATE TABLE IF NOT EXISTS role_permissions (
-    role_id INT REFERENCES roles(id),
-    permission access_right,
-    PRIMARY KEY (role_id, permission)
+    role_id INT REFERENCES roles(id) ON DELETE CASCADE,
+    permission_id INT REFERENCES permissions(id) ON DELETE CASCADE,
+    PRIMARY KEY(role_id, permission_id)
 );

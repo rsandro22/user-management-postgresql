@@ -1,12 +1,11 @@
 CREATE OR REPLACE VIEW user_overview AS
 SELECT 
-    id, username, email, created_at,
-    CASE
-        WHEN EXISTS (SELECT 1 FROM admin_users a WHERE a.id = u.id) THEN 'ADMIN'
-        WHEN EXISTS (SELECT 1 FROM regular_users r WHERE r.id = u.id) THEN 'REGULAR'
-        ELSE 'UNKNOWN'
-    END AS user_type
-FROM users u;
+    u.id, u.username, u.email, u.created_at,
+    STRING_AGG(r.name, ', ') AS roles
+FROM users u
+LEFT JOIN user_roles ur ON u.id = ur.user_id
+LEFT JOIN roles r ON ur.role_id = r.id
+GROUP BY u.id;
 
 CREATE OR REPLACE VIEW audit_overview AS
 SELECT a.id, u.username, a.action, a.action_time
@@ -18,7 +17,8 @@ SELECT
     r.id,
     r.name AS role_name,
     r.description,
-    STRING_AGG(rp.permission::TEXT, ', ') AS permissions
+    STRING_AGG(p.name, ', ') AS permissions
 FROM roles r
 LEFT JOIN role_permissions rp ON r.id = rp.role_id
+LEFT JOIN permissions p ON rp.permission_id = p.id
 GROUP BY r.id;

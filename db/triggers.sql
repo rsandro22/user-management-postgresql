@@ -1,6 +1,6 @@
-CREATE TABLE audit_log (
+CREATE TABLE IF NOT EXISTS audit_log (
     id SERIAL PRIMARY KEY,
-    user_id INT,
+    user_id INT REFERENCES users(id),
     action TEXT NOT NULL,
     action_time TIMESTAMP DEFAULT now()
 );
@@ -17,9 +17,9 @@ CREATE OR REPLACE FUNCTION log_user_update_delete()
 RETURNS TRIGGER AS $$
 BEGIN
     IF TG_OP = 'UPDATE' THEN
-        INSERT INTO audit_log(user_id, action) VALUES (NEW.id,'USER_UPDATED');
+        INSERT INTO audit_log(user_id, action) VALUES (NEW.id, 'USER_UPDATED');
     ELSIF TG_OP = 'DELETE' THEN
-        INSERT INTO audit_log(user_id, action) VALUES (OLD.id,'USER_DELETED');
+        INSERT INTO audit_log(user_id, action) VALUES (OLD.id, 'USER_DELETED');
     END IF;
     RETURN NEW;
 END;
