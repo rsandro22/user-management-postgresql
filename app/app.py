@@ -2,6 +2,7 @@ from flask import Flask, render_template, request, jsonify
 import psycopg2
 from psycopg2.extras import RealDictCursor
 from config import Config
+from functools import wraps
 
 app = Flask(__name__)
 from flask import session, redirect, url_for, request
@@ -14,6 +15,22 @@ config = Config()
 def get_db_connection():
     conn = psycopg2.connect(config.DATABASE_URL)
     return conn
+
+def admin_required(f):
+    @wraps(f)
+    def decorated_function(*args, **kwargs):
+        if "user_id" not in session:
+            return redirect(url_for("login"))
+        conn = get_db_connection()
+        cur = conn.cursor()
+        cur.execute("SELECT 1 FROM admin_users WHERE id=%s", (session["user_id"],))
+        is_admin = cur.fetchone()
+        cur.close()
+        conn.close()
+        if not is_admin:
+            return "Access denied", 403
+        return f(*args, **kwargs)
+    return decorated_function
 
 @app.route('/')
 def index():
