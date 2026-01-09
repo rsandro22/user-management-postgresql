@@ -5,6 +5,15 @@ CREATE TABLE audit_log (
     action_time TIMESTAMP DEFAULT now()
 );
 
+CREATE OR REPLACE FUNCTION log_user_insert()
+RETURNS TRIGGER AS $$
+BEGIN
+    INSERT INTO audit_log(user_id, action)
+    VALUES (NEW.id, 'USER_CREATED');
+    RETURN NEW;
+END;
+$$ LANGUAGE plpgsql;
+
 
 CREATE OR REPLACE FUNCTION log_user_update_delete()
 RETURNS TRIGGER AS $$
