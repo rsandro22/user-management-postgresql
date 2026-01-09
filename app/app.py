@@ -6,7 +6,7 @@ from functools import wraps
 
 DB_NAME = "user_management"
 DB_USER = "postgres"
-DB_PASSWORD = "bmw320xd"
+DB_PASSWORD = "bmw320xd" 
 DB_HOST = "localhost"
 DB_PORT = "5432"
 
@@ -14,10 +14,9 @@ app = Flask(__name__)
 app.secret_key = "tajni_kljuc_za_session"
 
 def get_db_connection(db_name=DB_NAME):
-    conn = psycopg2.connect(
+    return psycopg2.connect(
         dbname=db_name, user=DB_USER, password=DB_PASSWORD, host=DB_HOST, port=DB_PORT
     )
-    return conn
 
 def init_db():
     conn = get_db_connection("postgres")
@@ -32,6 +31,7 @@ def init_db():
 
     conn = get_db_connection()
     cur = conn.cursor()
+
     for path in ["db/schema.sql", "db/triggers.sql", "db/views.sql"]:
         with open(path, "r") as f:
             sql = f.read()
@@ -80,7 +80,6 @@ def init_db():
     conn.close()
     print("Database initialized successfully!")
 
-
 def admin_required(f):
     @wraps(f)
     def decorated_function(*args, **kwargs):
@@ -91,19 +90,17 @@ def admin_required(f):
         return f(*args, **kwargs)
     return decorated_function
 
-
 @app.route("/login", methods=["GET","POST"])
 def login():
     if request.method == "POST":
         username = request.form["username"]
         password = request.form["password"]
-
         conn = get_db_connection()
         cur = conn.cursor(cursor_factory=RealDictCursor)
         cur.execute("SELECT * FROM users WHERE username=%s", (username,))
         user = cur.fetchone()
 
-        is_admin = False
+        user_type = "UNKNOWN"
         if user:
             cur.execute("""
                 SELECT CASE
@@ -116,9 +113,7 @@ def login():
                 LEFT JOIN regular_users r ON u.id = r.id
                 WHERE u.id = %s
             """, (user["id"],))
-            user_type_row = cur.fetchone()
-            if user_type_row and user_type_row["user_type"] == "ADMIN":
-                is_admin = True
+            user_type = cur.fetchone()["user_type"]
 
         cur.close()
         conn.close()
@@ -126,19 +121,16 @@ def login():
         if user and check_password_hash(user["password"], password):
             session["user_id"] = user["id"]
             session["username"] = user["username"]
-            session["is_admin"] = is_admin
+            session["is_admin"] = (user_type == "ADMIN")
             return redirect(url_for("index"))
         else:
             return "Invalid credentials", 401
-
     return render_template("login.html")
-
 
 @app.route("/logout")
 def logout():
     session.clear()
     return redirect(url_for("login"))
-
 
 @app.route("/users/add", methods=["POST"])
 @admin_required
@@ -155,7 +147,6 @@ def add_user():
     conn.close()
     return redirect(url_for("users"))
 
-
 @app.route("/users/delete/<int:user_id>", methods=["POST"])
 @admin_required
 def delete_user(user_id):
@@ -167,13 +158,11 @@ def delete_user(user_id):
     conn.close()
     return redirect(url_for("users"))
 
-
 @app.route("/")
 def index():
     if "user_id" not in session:
         return redirect(url_for("login"))
     return render_template("index.html")
-
 
 @app.route("/users")
 def users():
@@ -187,7 +176,6 @@ def users():
     conn.close()
     return render_template("users.html", users=users_list)
 
-
 @app.route("/roles")
 def roles():
     if "user_id" not in session:
@@ -200,7 +188,6 @@ def roles():
     conn.close()
     return render_template("roles.html", roles=roles_list)
 
-
 @app.route("/audit")
 def audit():
     if "user_id" not in session:
@@ -212,7 +199,6 @@ def audit():
     cur.close()
     conn.close()
     return render_template("audit.html", logs=logs)
-
 
 if __name__ == "__main__":
     init_db()

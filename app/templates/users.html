@@ -7,7 +7,10 @@
 <body>
 <h1>Users</h1>
 <nav>
-<a href="/">Home</a> <a href="/roles">Roles</a> <a href="/audit">Audit</a> <a href="/logout">Logout</a>
+<a href="/">Home</a> 
+<a href="/roles">Roles</a> 
+<a href="/audit">Audit</a> 
+<a href="/logout">Logout</a>
 </nav>
 
 {% if session["is_admin"] %}
@@ -22,14 +25,9 @@
 
 <table border="1">
 <tr>
-<th>ID</th>
-<th>Username</th>
-<th>Email</th>
-<th>Created</th>
-<th>Type</th>
+<th>ID</th><th>Username</th><th>Email</th><th>Created</th><th>Type</th>
 {% if session["is_admin"] %}<th>Actions</th>{% endif %}
 </tr>
-
 {% for user in users %}
 <tr>
 <td>{{ user.id }}</td>
