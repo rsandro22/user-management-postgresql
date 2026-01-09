@@ -10,7 +10,7 @@
 <a href="/">Home</a> <a href="/roles">Roles</a> <a href="/audit">Audit</a> <a href="/logout">Logout</a>
 </nav>
 
-{% if session.is_admin %}
+{% if session["is_admin"] %}
 <h2>Add User (Admin only)</h2>
 <form action="/users/add" method="post">
     Username: <input type="text" name="username" required>
@@ -27,7 +27,7 @@
 <th>Email</th>
 <th>Created</th>
 <th>Type</th>
-{% if session.is_admin %}<th>Actions</th>{% endif %}
+{% if session["is_admin"] %}<th>Actions</th>{% endif %}
 </tr>
 
 {% for user in users %}
@@ -37,7 +37,7 @@
 <td>{{ user.email }}</td>
 <td>{{ user.created_at }}</td>
 <td>{{ user.user_type }}</td>
-{% if session.is_admin %}
+{% if session["is_admin"] %}
 <td>
 <form action="/users/delete/{{ user.id }}" method="post">
 <button type="submit">Delete</button>
