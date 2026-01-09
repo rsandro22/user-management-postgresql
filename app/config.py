@@ -1,18 +1,50 @@
-import os
-import getpass
+import psycopg2
+from psycopg2.extras import RealDictCursor
 
-class Config:
-    DB_NAME = "user_management"
-    DB_USER = "postgres"
-    DB_PASSWORD = None
-    DB_HOST = "localhost"
-    DB_PORT = "5432"
+DB_NAME = "user_management"
+DB_USER = "postgres"
+DB_PASSWORD = "postgres"  
+DB_HOST = "localhost"
+DB_PORT = "5432"
+
+def get_connection(db_name=DB_NAME):
+    conn = psycopg2.connect(
+        dbname=db_name, user=DB_USER, password=DB_PASSWORD, host=DB_HOST, port=DB_PORT
+    )
+    return conn
+
+def init_db():
+    conn = get_connection("postgres") 
+    conn.autocommit = True
+    cur = conn.cursor()
     
-    def __init__(self):
-        # Pitaj za password samo ako nije setovan
-        if not Config.DB_PASSWORD:
-            Config.DB_PASSWORD = getpass.getpass("Enter PostgreSQL password: ")
+    cur.execute(f"SELECT 1 FROM pg_database WHERE datname='{DB_NAME}'")
+    if not cur.fetchone():
+        cur.execute(f"CREATE DATABASE {DB_NAME}")
     
-    @property
-    def DATABASE_URL(self):
-        return f"postgresql://{self.DB_USER}:{self.DB_PASSWORD}@{self.DB_HOST}:{self.DB_PORT}/{self.DB_NAME}"
+    cur.close()
+    conn.close()
+    
+    conn = get_connection()
+    cur = conn.cursor()
+    with open("db/schema.sql", "r") as f:
+        cur.execute(f.read())
+    with open("db/triggers.sql", "r") as f:
+        cur.execute(f.read())
+    with open("db/views.sql", "r") as f:
+        cur.execute(f.read())
+    
+    cur.execute("""
+    INSERT INTO roles(name, description) VALUES ('Admin','Administrator role') ON CONFLICT DO NOTHING;
+    INSERT INTO roles(name, description) VALUES ('Regular','Regular user role') ON CONFLICT DO NOTHING;
+    INSERT INTO users(username,email) VALUES ('admin','admin@example.com') ON CONFLICT DO NOTHING;
+    INSERT INTO admin_users(username,email,admin_level) VALUES ('superadmin','superadmin@example.com',10) ON CONFLICT DO NOTHING;
+    INSERT INTO regular_users(username,email,reputation) VALUES ('john','john@example.com',5) ON CONFLICT DO NOTHING;
+    INSERT INTO role_permissions(role_id, permission) VALUES
+        (1,'READ'), (1,'WRITE'), (1,'DELETE'),
+        (2,'READ')
+    ON CONFLICT DO NOTHING;
+    """)
+    conn.commit()
+    cur.close()
+    conn.close()
