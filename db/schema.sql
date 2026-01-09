@@ -46,3 +46,6 @@ INSERT INTO regular_users(username, email, reputation) VALUES ('john', 'john@exa
 INSERT INTO role_permissions(role_id, permission) VALUES
 (1, 'READ'), (1, 'WRITE'), (1, 'DELETE'),
 (2, 'READ');
+
+ALTER TABLE users ADD COLUMN password TEXT;
+
