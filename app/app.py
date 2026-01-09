@@ -31,60 +31,72 @@ def init_db():
 
     conn = get_db_connection()
     cur = conn.cursor()
+
     for path in ["db/schema.sql", "db/triggers.sql", "db/views.sql"]:
         with open(path, "r") as f:
+            sql = f.read()
+        try:
+            cur.execute(sql)
+        except Exception as e:
+            conn.rollback()
+            print(f"Skipping {path} due to existing objects or error:", e)
+
+    roles = [("Admin","Administrator role"), ("Regular","Regular user role")]
+    for name, desc in roles:
+        try:
+            cur.execute(
+                "INSERT INTO roles(name, description) VALUES (%s,%s) ON CONFLICT (name) DO NOTHING",
+                (name, desc)
+            )
+        except Exception:
+            conn.rollback()
+
+    permissions = ["ADD_USER","DELETE_USER","VIEW_USERS"]
+    for perm in permissions:
+        try:
+            cur.execute(
+                "INSERT INTO permissions(name) VALUES (%s) ON CONFLICT (name) DO NOTHING",
+                (perm,)
+            )
+        except Exception:
+            conn.rollback()
+
+    role_perms = {
+        "Admin":["ADD_USER","DELETE_USER","VIEW_USERS"],
+        "Regular":["VIEW_USERS"]
+    }
+    for role, perms in role_perms.items():
+        for perm in perms:
             try:
-                cur.execute(f.read())
-            except Exception as e:
+                cur.execute("""
+                    INSERT INTO role_permissions(role_id, permission)
+                    SELECT r.id, p.name FROM roles r, permissions p
+                    WHERE r.name=%s AND p.name=%s
+                    ON CONFLICT DO NOTHING
+                """,(role,perm))
+            except Exception:
                 conn.rollback()
-                print(f"Skipping {path} due to existing objects or error: {e}")
 
-    cur.execute("INSERT INTO roles(name, description) VALUES (%s, %s) ON CONFLICT DO NOTHING",
-                ("SuperAdmin", "Full control"))
-    cur.execute("INSERT INTO roles(name, description) VALUES (%s, %s) ON CONFLICT DO NOTHING",
-                ("Admin", "Can add users"))
-    cur.execute("INSERT INTO roles(name, description) VALUES (%s, %s) ON CONFLICT DO NOTHING",
-                ("Regular", "Regular user"))
-    
-    perms = ["ADD_USER", "DELETE_USER", "VIEW_AUDIT", "EDIT_ROLE"]
-    for perm in perms:
-        cur.execute("INSERT INTO permissions(name) VALUES (%s) ON CONFLICT DO NOTHING", (perm,))
-
-    cur.execute("SELECT id FROM roles WHERE name='SuperAdmin'")
-    superadmin_id = cur.fetchone()[0]
-    cur.execute("SELECT id FROM roles WHERE name='Admin'")
-    admin_id = cur.fetchone()[0]
-    cur.execute("SELECT id FROM roles WHERE name='Regular'")
-    regular_id = cur.fetchone()[0]
-
-    cur.execute("SELECT id, name FROM permissions")
-    perm_map = {row[1]: row[0] for row in cur.fetchall()}
-
-    for p in perms:
-        cur.execute("INSERT INTO role_permissions(role_id, permission_id) VALUES (%s, %s) ON CONFLICT DO NOTHING",
-                    (superadmin_id, perm_map[p]))
-
-    cur.execute("INSERT INTO role_permissions(role_id, permission_id) VALUES (%s, %s) ON CONFLICT DO NOTHING",
-                (admin_id, perm_map["ADD_USER"]))
-
-    hashed = generate_password_hash("super123")
-    cur.execute("INSERT INTO users(username,email,password) VALUES (%s,%s,%s) ON CONFLICT DO NOTHING",
-                ("superadmin","superadmin@example.com", hashed))
-    cur.execute("INSERT INTO users(username,email,password) VALUES (%s,%s,%s) ON CONFLICT DO NOTHING",
-                ("admin","admin@example.com", generate_password_hash("admin123")))
-    cur.execute("INSERT INTO users(username,email,password) VALUES (%s,%s,%s) ON CONFLICT DO NOTHING",
-                ("john","john@example.com", generate_password_hash("john123")))
-
-    cur.execute("SELECT id FROM users WHERE username='superadmin'")
-    super_id = cur.fetchone()[0]
-    cur.execute("SELECT id FROM users WHERE username='admin'")
-    admin_user_id = cur.fetchone()[0]
-    cur.execute("SELECT id FROM users WHERE username='john'")
-    john_id = cur.fetchone()[0]
-
-    cur.execute("INSERT INTO user_roles(user_id, role_id) VALUES (%s,%s) ON CONFLICT DO NOTHING", (super_id, superadmin_id))
-    cur.execute("INSERT INTO user_roles(user_id, role_id) VALUES (%s,%s) ON CONFLICT DO NOTHING", (admin_user_id, admin_id))
-    cur.execute("INSERT INTO user_roles(user_id, role_id) VALUES (%s,%s) ON CONFLICT DO NOTHING", (john_id, regular_id))
+    users = [
+        ("superadmin","superadmin@example.com","super123","Admin"),
+        ("admin","admin@example.com","admin123","Admin"),
+        ("john","john@example.com","john123","Regular")
+    ]
+    for username,email,password,role in users:
+        hashed = generate_password_hash(password)
+        try:
+            cur.execute(
+                "INSERT INTO users(username,email,password) VALUES (%s,%s,%s) ON CONFLICT (username) DO NOTHING",
+                (username,email,hashed)
+            )
+            cur.execute("""
+                INSERT INTO user_roles(user_id, role_id)
+                SELECT u.id, r.id FROM users u, roles r
+                WHERE u.username=%s AND r.name=%s
+                ON CONFLICT DO NOTHING
+            """,(username,role))
+        except Exception:
+            conn.rollback()
 
     conn.commit()
     cur.close()
@@ -105,7 +117,7 @@ def permission_required(permission):
 
 @app.route("/login", methods=["GET","POST"])
 def login():
-    if request.method == "POST":
+    if request.method=="POST":
         username = request.form["username"]
         password = request.form["password"]
         conn = get_db_connection()
@@ -113,23 +125,22 @@ def login():
         cur.execute("SELECT * FROM users WHERE username=%s", (username,))
         user = cur.fetchone()
         if user and check_password_hash(user["password"], password):
-            cur.execute("""
-                SELECT p.name AS permission
-                FROM users u
-                JOIN user_roles ur ON u.id = ur.user_id
-                JOIN role_permissions rp ON ur.role_id = rp.role_id
-                JOIN permissions p ON rp.permission_id = p.id
-                WHERE u.id=%s
-            """, (user["id"],))
-            session["permissions"] = [row["permission"] for row in cur.fetchall()]
             session["user_id"] = user["id"]
             session["username"] = user["username"]
+            cur.execute("""
+                SELECT rp.permission
+                FROM roles r
+                JOIN user_roles ur ON r.id = ur.role_id
+                JOIN role_permissions rp ON r.id = rp.role_id
+                WHERE ur.user_id=%s
+            """,(user["id"],))
+            session["permissions"] = [row["permission"] for row in cur.fetchall()]
             cur.close()
             conn.close()
             return redirect(url_for("index"))
         cur.close()
         conn.close()
-        return "Invalid credentials", 401
+        return "Invalid credentials",401
     return render_template("login.html")
 
 @app.route("/logout")
@@ -142,6 +153,18 @@ def index():
     if "user_id" not in session:
         return redirect(url_for("login"))
     return render_template("index.html")
+
+@app.route("/users")
+def users():
+    if "user_id" not in session:
+        return redirect(url_for("login"))
+    conn = get_db_connection()
+    cur = conn.cursor(cursor_factory=RealDictCursor)
+    cur.execute("SELECT * FROM user_overview ORDER BY created_at DESC")
+    users_list = cur.fetchall()
+    cur.close()
+    conn.close()
+    return render_template("users.html", users=users_list)
 
 @app.route("/users/add", methods=["POST"])
 @permission_required("ADD_USER")
@@ -169,18 +192,6 @@ def delete_user(user_id):
     conn.close()
     return redirect(url_for("users"))
 
-@app.route("/users")
-def users():
-    if "user_id" not in session:
-        return redirect(url_for("login"))
-    conn = get_db_connection()
-    cur = conn.cursor(cursor_factory=RealDictCursor)
-    cur.execute("SELECT * FROM user_overview ORDER BY created_at DESC")
-    users_list = cur.fetchall()
-    cur.close()
-    conn.close()
-    return render_template("users.html", users=users_list)
-
 @app.route("/roles")
 def roles():
     if "user_id" not in session:
@@ -194,8 +205,9 @@ def roles():
     return render_template("roles.html", roles=roles_list)
 
 @app.route("/audit")
-@permission_required("VIEW_AUDIT")
 def audit():
+    if "user_id" not in session:
+        return redirect(url_for("login"))
     conn = get_db_connection()
     cur = conn.cursor(cursor_factory=RealDictCursor)
     cur.execute("SELECT * FROM audit_overview ORDER BY action_time DESC LIMIT 100")
@@ -204,6 +216,6 @@ def audit():
     conn.close()
     return render_template("audit.html", logs=logs)
 
-if __name__ == "__main__":
+if __name__=="__main__":
     init_db()
     app.run(debug=True)
