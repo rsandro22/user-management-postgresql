@@ -6,11 +6,16 @@ CREATE TABLE audit_log (
 );
 
 
-CREATE OR REPLACE FUNCTION log_user_insert()
+CREATE OR REPLACE FUNCTION log_user_update_delete()
 RETURNS TRIGGER AS $$
 BEGIN
-    INSERT INTO audit_log (user_id, action)
-    VALUES (NEW.id, 'USER_CREATED');
+    IF TG_OP = 'UPDATE' THEN
+        INSERT INTO audit_log(user_id, action)
+        VALUES (NEW.id, 'USER_UPDATED');
+    ELSIF TG_OP = 'DELETE' THEN
+        INSERT INTO audit_log(user_id, action)
+        VALUES (OLD.id, 'USER_DELETED');
+    END IF;
     RETURN NEW;
 END;
 $$ LANGUAGE plpgsql;
@@ -20,5 +25,10 @@ CREATE TRIGGER trg_user_insert
 AFTER INSERT ON users
 FOR EACH ROW
 EXECUTE FUNCTION log_user_insert();
+
+CREATE TRIGGER trg_user_update_delete
+AFTER UPDATE OR DELETE ON users
+FOR EACH ROW
+EXECUTE FUNCTION log_user_update_delete();
 
 
