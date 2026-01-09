@@ -20,7 +20,6 @@ def get_db_connection(db_name=DB_NAME):
     return conn
 
 def init_db():
-    # 1. Connect to postgres to create db if it doesn't exist
     conn = get_db_connection("postgres")
     conn.autocommit = True
     cur = conn.cursor()
@@ -31,60 +30,49 @@ def init_db():
     cur.close()
     conn.close()
 
-    # 2. Connect to the new DB
     conn = get_db_connection()
     cur = conn.cursor()
 
-    # ---- Load schema safely ----
-    with open("db/schema.sql", "r") as f:
-        sql = f.read()
-    try:
-        cur.execute(sql)
-    except psycopg2.errors.DuplicateObject:
-        conn.rollback()  # ako već postoji, preskoči
-        print("Schema already exists, skipping schema.sql")
 
-    # ---- Load triggers ----
-    with open("db/triggers.sql", "r") as f:
-        sql = f.read()
-    try:
-        cur.execute(sql)
-    except psycopg2.errors.DuplicateObject:
-        conn.rollback()
-        print("Triggers already exist, skipping triggers.sql")
+    def execute_sql_file_safely(path):
+        with open(path, "r") as f:
+            sql_blocks = f.read().split(';')
+        for block in sql_blocks:
+            if block.strip():
+                try:
+                    cur.execute(block)
+                except (psycopg2.errors.DuplicateTable,
+                        psycopg2.errors.DuplicateFunction,
+                        psycopg2.errors.DuplicateObject,
+                        psycopg2.errors.DuplicateColumn):
+                    conn.rollback()
+                except Exception as e:
+                    conn.rollback()
+                    print(f"Skipping SQL block from {path} due to:", e)
 
-    # ---- Load views ----
-    with open("db/views.sql", "r") as f:
-        sql = f.read()
-    try:
-        cur.execute(sql)
-    except Exception as e:
-        conn.rollback()
-        print("Views may already exist, skipping views.sql", e)
+    execute_sql_file_safely("db/schema.sql")
+    execute_sql_file_safely("db/triggers.sql")
+    execute_sql_file_safely("db/views.sql")
 
-    # ---- Add initial roles ----
-    try:
-        cur.execute("INSERT INTO roles(name, description) VALUES ('Admin','Administrator role')")
-    except psycopg2.errors.UniqueViolation:
-        conn.rollback()
+    roles = [("Admin","Administrator role"), ("Regular","Regular user role")]
+    for name, desc in roles:
+        try:
+            cur.execute("INSERT INTO roles(name, description) VALUES (%s,%s)", (name, desc))
+        except psycopg2.errors.UniqueViolation:
+            conn.rollback()
 
-    try:
-        cur.execute("INSERT INTO roles(name, description) VALUES ('Regular','Regular user role')")
-    except psycopg2.errors.UniqueViolation:
-        conn.rollback()
-
-    # ---- Add initial users ----
     users = [
         ("admin","admin@example.com","admin123"),
         ("superadmin","superadmin@example.com","super123"),
         ("john","john@example.com","john123")
     ]
-
     for username,email,password in users:
         try:
             hashed = generate_password_hash(password)
-            cur.execute("INSERT INTO users(username,email,password) VALUES (%s,%s,%s)",
-                        (username,email,hashed))
+            cur.execute(
+                "INSERT INTO users(username,email,password) VALUES (%s,%s,%s)",
+                (username,email,hashed)
+            )
         except psycopg2.errors.UniqueViolation:
             conn.rollback()
 
@@ -92,6 +80,7 @@ def init_db():
     cur.close()
     conn.close()
     print("Database initialized successfully!")
+
 
 
 def admin_required(f):
