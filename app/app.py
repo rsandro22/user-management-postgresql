@@ -6,7 +6,7 @@ from functools import wraps
 
 DB_NAME = "user_management"
 DB_USER = "postgres"
-DB_PASSWORD = "bmw320xd" 
+DB_PASSWORD = "bmw320xd"
 DB_HOST = "localhost"
 DB_PORT = "5432"
 
@@ -32,7 +32,6 @@ def init_db():
 
     conn = get_db_connection()
     cur = conn.cursor()
-
 
     def execute_sql_file_safely(path):
         with open(path, "r") as f:
@@ -70,18 +69,22 @@ def init_db():
         try:
             hashed = generate_password_hash(password)
             cur.execute(
-                "INSERT INTO users(username,email,password) VALUES (%s,%s,%s)",
+                "INSERT INTO users(username,email,password) VALUES (%s,%s,%s) ON CONFLICT (username) DO NOTHING",
                 (username,email,hashed)
             )
         except psycopg2.errors.UniqueViolation:
             conn.rollback()
 
+    cur.execute("""
+        INSERT INTO admin_users(id, admin_level)
+        SELECT id, 10 FROM users WHERE username='superadmin'
+        ON CONFLICT (id) DO NOTHING
+    """)
+
     conn.commit()
     cur.close()
     conn.close()
     print("Database initialized successfully!")
-
-
 
 def admin_required(f):
     @wraps(f)
@@ -93,7 +96,6 @@ def admin_required(f):
         return f(*args, **kwargs)
     return decorated_function
 
-
 @app.route("/login", methods=["GET","POST"])
 def login():
     if request.method == "POST":
@@ -104,14 +106,15 @@ def login():
         cur.execute("SELECT * FROM users WHERE username=%s", (username,))
         user = cur.fetchone()
 
-        cur.execute("""
-            SELECT CASE
-                WHEN EXISTS (SELECT 1 FROM admin_users a WHERE a.id=%s) THEN 'ADMIN'
-                WHEN EXISTS (SELECT 1 FROM regular_users r WHERE r.id=%s) THEN 'REGULAR'
-                ELSE 'UNKNOWN'
-            END AS user_type
-        """, (user["id"], user["id"]))
-        user_type = cur.fetchone()["user_type"]
+        if user:
+            cur.execute("""
+                SELECT CASE
+                    WHEN EXISTS (SELECT 1 FROM admin_users a WHERE a.id=%s) THEN 'ADMIN'
+                    WHEN EXISTS (SELECT 1 FROM regular_users r WHERE r.id=%s) THEN 'REGULAR'
+                    ELSE 'UNKNOWN'
+                END AS user_type
+            """, (user["id"], user["id"]))
+            user_type = cur.fetchone()["user_type"]
 
         cur.close()
         conn.close()
@@ -125,11 +128,11 @@ def login():
             return "Invalid credentials", 401
     return render_template("login.html")
 
-
 @app.route("/logout")
 def logout():
     session.clear()
     return redirect(url_for("login"))
+
 
 @app.route("/users/add", methods=["POST"])
 @admin_required
@@ -169,7 +172,7 @@ def users():
         return redirect(url_for("login"))
     conn = get_db_connection()
     cur = conn.cursor(cursor_factory=RealDictCursor)
-    cur.execute('SELECT * FROM user_overview ORDER BY created_at DESC')
+    cur.execute("SELECT * FROM user_overview ORDER BY created_at DESC")
     users_list = cur.fetchall()
     cur.close()
     conn.close()
@@ -181,7 +184,7 @@ def roles():
         return redirect(url_for("login"))
     conn = get_db_connection()
     cur = conn.cursor(cursor_factory=RealDictCursor)
-    cur.execute('SELECT * FROM role_permissions_overview')
+    cur.execute("SELECT * FROM role_permissions_overview")
     roles_list = cur.fetchall()
     cur.close()
     conn.close()
@@ -193,7 +196,7 @@ def audit():
         return redirect(url_for("login"))
     conn = get_db_connection()
     cur = conn.cursor(cursor_factory=RealDictCursor)
-    cur.execute('SELECT * FROM audit_overview ORDER BY action_time DESC LIMIT 100')
+    cur.execute("SELECT * FROM audit_overview ORDER BY action_time DESC LIMIT 100")
     logs = cur.fetchall()
     cur.close()
     conn.close()
