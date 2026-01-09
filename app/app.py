@@ -20,6 +20,7 @@ def get_db_connection(db_name=DB_NAME):
     return conn
 
 def init_db():
+    # 1. Connect to postgres to create db if it doesn't exist
     conn = get_db_connection("postgres")
     conn.autocommit = True
     cur = conn.cursor()
@@ -30,40 +31,68 @@ def init_db():
     cur.close()
     conn.close()
 
+    # 2. Connect to the new DB
     conn = get_db_connection()
     cur = conn.cursor()
+
+    # ---- Load schema safely ----
     with open("db/schema.sql", "r") as f:
-        cur.execute(f.read())
+        sql = f.read()
+    try:
+        cur.execute(sql)
+    except psycopg2.errors.DuplicateObject:
+        conn.rollback()  # ako već postoji, preskoči
+        print("Schema already exists, skipping schema.sql")
+
+    # ---- Load triggers ----
     with open("db/triggers.sql", "r") as f:
-        cur.execute(f.read())
+        sql = f.read()
+    try:
+        cur.execute(sql)
+    except psycopg2.errors.DuplicateObject:
+        conn.rollback()
+        print("Triggers already exist, skipping triggers.sql")
+
+    # ---- Load views ----
     with open("db/views.sql", "r") as f:
-        cur.execute(f.read())
-    
-    cur.execute("""
-    INSERT INTO roles(name, description) VALUES ('Admin','Administrator role') ON CONFLICT DO NOTHING;
-    INSERT INTO roles(name, description) VALUES ('Regular','Regular user role') ON CONFLICT DO NOTHING;
-    
-    INSERT INTO users(username,email,password) 
-        VALUES ('admin','admin@example.com', %s) 
-        ON CONFLICT (username) DO NOTHING;
-    
-    INSERT INTO admin_users(username,email,admin_level,password) 
-        VALUES ('superadmin','superadmin@example.com',10,%s) 
-        ON CONFLICT (username) DO NOTHING;
-    
-    INSERT INTO regular_users(username,email,reputation,password) 
-        VALUES ('john','john@example.com',5,%s) 
-        ON CONFLICT (username) DO NOTHING;
-    
-    INSERT INTO role_permissions(role_id, permission) VALUES
-        (1,'READ'),(1,'WRITE'),(1,'DELETE'),
-        (2,'READ') ON CONFLICT DO NOTHING;
-    """, (generate_password_hash("admin123"), generate_password_hash("super123"), generate_password_hash("john123")))
-    
+        sql = f.read()
+    try:
+        cur.execute(sql)
+    except Exception as e:
+        conn.rollback()
+        print("Views may already exist, skipping views.sql", e)
+
+    # ---- Add initial roles ----
+    try:
+        cur.execute("INSERT INTO roles(name, description) VALUES ('Admin','Administrator role')")
+    except psycopg2.errors.UniqueViolation:
+        conn.rollback()
+
+    try:
+        cur.execute("INSERT INTO roles(name, description) VALUES ('Regular','Regular user role')")
+    except psycopg2.errors.UniqueViolation:
+        conn.rollback()
+
+    # ---- Add initial users ----
+    users = [
+        ("admin","admin@example.com","admin123"),
+        ("superadmin","superadmin@example.com","super123"),
+        ("john","john@example.com","john123")
+    ]
+
+    for username,email,password in users:
+        try:
+            hashed = generate_password_hash(password)
+            cur.execute("INSERT INTO users(username,email,password) VALUES (%s,%s,%s)",
+                        (username,email,hashed))
+        except psycopg2.errors.UniqueViolation:
+            conn.rollback()
+
     conn.commit()
     cur.close()
     conn.close()
     print("Database initialized successfully!")
+
 
 def admin_required(f):
     @wraps(f)
