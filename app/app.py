@@ -88,16 +88,11 @@ def admin_required(f):
     def decorated_function(*args, **kwargs):
         if "user_id" not in session:
             return redirect(url_for("login"))
-        conn = get_db_connection()
-        cur = conn.cursor()
-        cur.execute("SELECT 1 FROM admin_users WHERE id=%s", (session["user_id"],))
-        is_admin = cur.fetchone()
-        cur.close()
-        conn.close()
-        if not is_admin:
+        if not session.get("is_admin"):
             return "Access denied", 403
         return f(*args, **kwargs)
     return decorated_function
+
 
 @app.route("/login", methods=["GET","POST"])
 def login():
@@ -108,15 +103,28 @@ def login():
         cur = conn.cursor(cursor_factory=RealDictCursor)
         cur.execute("SELECT * FROM users WHERE username=%s", (username,))
         user = cur.fetchone()
+
+        cur.execute("""
+            SELECT CASE
+                WHEN EXISTS (SELECT 1 FROM admin_users a WHERE a.id=%s) THEN 'ADMIN'
+                WHEN EXISTS (SELECT 1 FROM regular_users r WHERE r.id=%s) THEN 'REGULAR'
+                ELSE 'UNKNOWN'
+            END AS user_type
+        """, (user["id"], user["id"]))
+        user_type = cur.fetchone()["user_type"]
+
         cur.close()
         conn.close()
+
         if user and check_password_hash(user["password"], password):
             session["user_id"] = user["id"]
             session["username"] = user["username"]
+            session["is_admin"] = (user_type == "ADMIN") 
             return redirect(url_for("index"))
         else:
             return "Invalid credentials", 401
     return render_template("login.html")
+
 
 @app.route("/logout")
 def logout():
