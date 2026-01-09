@@ -105,11 +105,15 @@ def login():
         if user:
             cur.execute("""
                 SELECT CASE
-                    WHEN EXISTS (SELECT 1 FROM admin_users a WHERE a.id=%s) THEN 'ADMIN'
-                    WHEN EXISTS (SELECT 1 FROM regular_users r WHERE r.id=%s) THEN 'REGULAR'
+                    WHEN a.id IS NOT NULL THEN 'ADMIN'
+                    WHEN r.id IS NOT NULL THEN 'REGULAR'
                     ELSE 'UNKNOWN'
                 END AS user_type
-            """, (user["id"], user["id"]))
+                FROM users u
+                LEFT JOIN admin_users a ON u.id = a.id
+                LEFT JOIN regular_users r ON u.id = r.id
+                WHERE u.id = %s
+            """, (user["id"],))
             user_type = cur.fetchone()["user_type"]
 
         cur.close()
@@ -118,11 +122,13 @@ def login():
         if user and check_password_hash(user["password"], password):
             session["user_id"] = user["id"]
             session["username"] = user["username"]
-            session["is_admin"] = (user_type == "ADMIN") 
+            session["is_admin"] = (user_type == "ADMIN")
             return redirect(url_for("index"))
         else:
             return "Invalid credentials", 401
+
     return render_template("login.html")
+
 
 @app.route("/logout")
 def logout():
