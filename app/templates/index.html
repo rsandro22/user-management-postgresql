@@ -3,12 +3,20 @@
 <head><meta charset="UTF-8"><title>Home</title></head>
 <body>
 <h1>User Management System</h1>
+
 <nav>
-<a href="/users">Users</a>
-<a href="/roles">Roles</a>
-<a href="/audit">Audit Log</a>
-<a href="/logout">Logout</a>
+  {% if 'VIEW_USERS' in permissions %}
+    <a href="/users">Users</a>
+    <a href="/roles">Roles</a>
+  {% endif %}
+
+  {% if 'VIEW_AUDIT' in permissions %}
+    <a href="/audit">Audit Log</a>
+  {% endif %}
+
+  <a href="/logout">Logout</a>
 </nav>
+
 <p>Welcome! Use the menu to navigate.</p>
 </body>
 </html>

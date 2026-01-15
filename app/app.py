@@ -40,6 +40,8 @@ def run_sql_file(filename):
     base_dir = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
     full_path = os.path.join(base_dir, filename)
 
+
+
     conn = get_db()
     cur = conn.cursor()
 
@@ -114,7 +116,7 @@ def permission_required(permission):
 def index():
     if "user_id" not in session:
         return redirect(url_for("login"))
-    return render_template("index.html")
+    return render_template("index.html", permissions=session.get("permissions", []))
 
 
 @app.route("/login", methods=["GET", "POST"])
@@ -244,7 +246,7 @@ def roles():
     return render_template("roles.html", roles=roles)
 
 @app.route("/audit")
-@permission_required("VIEW_USERS")
+@permission_required("VIEW_AUDIT")
 def audit():
     conn = get_db()
     cur = conn.cursor(cursor_factory=RealDictCursor)
