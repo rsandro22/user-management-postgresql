@@ -1,0 +1,12 @@
+\begin{MintedVerbatim}[commandchars=\\\{\}]
+\PYG{n+nt}{\PYGZlt{}head\PYGZgt{}}
+\PYG{+w}{  }\PYG{n+nt}{\PYGZlt{}meta}\PYG{+w}{ }\PYG{n+na}{http\PYGZhy{}equiv=}\PYG{l+s}{\PYGZdq{}Content\PYGZhy{}Type\PYGZdq{}}\PYG{+w}{ }\PYG{n+na}{content=}\PYG{l+s}{\PYGZdq{}text/html; charset=utf\PYGZhy{}8\PYGZdq{}}\PYG{+w}{ }\PYG{n+nt}{/\PYGZgt{}}
+\PYG{+w}{  }\PYG{n+nt}{\PYGZlt{}link}\PYG{+w}{ }\PYG{n+na}{rel=}\PYG{l+s}{\PYGZdq{}shortcut icon\PYGZdq{}}\PYG{+w}{ }\PYG{n+na}{href=}\PYG{l+s}{\PYGZdq{}https://www.foi.unizg.hr/sites/default/files/favicon\PYGZus{}0\PYGZus{}1.ico\PYGZdq{}}\PYG{+w}{ }\PYG{n+na}{type=}\PYG{l+s}{\PYGZdq{}image/vnd.microsoft.icon\PYGZdq{}}\PYG{+w}{ }\PYG{n+nt}{/\PYGZgt{}}
+\PYG{+w}{  }\PYG{n+nt}{\PYGZlt{}meta}\PYG{+w}{ }\PYG{n+na}{name=}\PYG{l+s}{\PYGZdq{}generator\PYGZdq{}}\PYG{+w}{ }\PYG{n+na}{content=}\PYG{l+s}{\PYGZdq{}Drupal 7 (http://drupal.org)\PYGZdq{}}\PYG{+w}{ }\PYG{n+nt}{/\PYGZgt{}}
+\PYG{+w}{  }\PYG{n+nt}{\PYGZlt{}link}\PYG{+w}{ }\PYG{n+na}{rel=}\PYG{l+s}{\PYGZdq{}canonical\PYGZdq{}}\PYG{+w}{ }\PYG{n+na}{href=}\PYG{l+s}{\PYGZdq{}https://www.foi.unizg.hr/hr\PYGZdq{}}\PYG{+w}{ }\PYG{n+nt}{/\PYGZgt{}}
+\PYG{+w}{  }\PYG{n+nt}{\PYGZlt{}link}\PYG{+w}{ }\PYG{n+na}{rel=}\PYG{l+s}{\PYGZdq{}shortlink\PYGZdq{}}\PYG{+w}{ }\PYG{n+na}{href=}\PYG{l+s}{\PYGZdq{}https://www.foi.unizg.hr/hr\PYGZdq{}}\PYG{+w}{ }\PYG{n+nt}{/\PYGZgt{}}
+\PYG{+w}{  }\PYG{c+cm}{\PYGZlt{}!\PYGZhy{}\PYGZhy{} Set the viewport width to device width for mobile \PYGZhy{}\PYGZhy{}\PYGZgt{}}
+\PYG{+w}{  }\PYG{n+nt}{\PYGZlt{}meta}\PYG{+w}{ }\PYG{n+na}{name=}\PYG{l+s}{\PYGZdq{}viewport\PYGZdq{}}\PYG{+w}{ }\PYG{n+na}{content=}\PYG{l+s}{\PYGZdq{}width=device\PYGZhy{}width, initial\PYGZhy{}scale=1.0\PYGZdq{}}\PYG{n+nt}{\PYGZgt{}}
+\PYG{+w}{  }\PYG{n+nt}{\PYGZlt{}title\PYGZgt{}}Dobro\PYG{+w}{ }\PYGZpc{}*došli*)\PYG{+w}{ }na\PYG{+w}{ }FOI\PYG{+w}{ }|\PYG{+w}{ }FOI\PYG{n+nt}{\PYGZlt{}/title\PYGZgt{}}...
+\PYG{n+nt}{\PYGZlt{}/head\PYGZgt{}}
+\end{MintedVerbatim}

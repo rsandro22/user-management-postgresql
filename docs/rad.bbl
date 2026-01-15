@@ -1,0 +1,510 @@
+% $ biblatex auxiliary file $
+% $ biblatex bbl format version 3.3 $
+% Do not modify the above lines!
+%
+% This is an auxiliary file used by the 'biblatex' package.
+% This file may safely be deleted. It will be recreated by
+% biber as required.
+%
+\begingroup
+\makeatletter
+\@ifundefined{ver@biblatex.sty}
+  {\@latex@error
+     {Missing 'biblatex' package}
+     {The bibliography requires the 'biblatex' package.}
+      \aftergroup\endinput}
+  {}
+\endgroup
+
+
+\refsection{0}
+  \datalist[entry]{none/global//global/global/global}
+    \entry{oraictolic2011AkademskoPismoStrategije}{book}{}{}
+      \name{author}{1}{}{%
+        {{hash=7a7512afe601c883c3c31cb0a58f7f9a}{%
+           family={Oraić\bibnamedelima Tolić},
+           familyi={O\bibinitperiod\bibinitdelim T\bibinitperiod},
+           given={Dubravka},
+           giveni={D\bibinitperiod}}}%
+      }
+      \list{location}{1}{%
+        {Zagreb, HR}%
+      }
+      \list{publisher}{1}{%
+        {Naklada Ljevak}%
+      }
+      \strng{namehash}{7a7512afe601c883c3c31cb0a58f7f9a}
+      \strng{fullhash}{7a7512afe601c883c3c31cb0a58f7f9a}
+      \strng{fullhashraw}{7a7512afe601c883c3c31cb0a58f7f9a}
+      \strng{bibnamehash}{7a7512afe601c883c3c31cb0a58f7f9a}
+      \strng{authorbibnamehash}{7a7512afe601c883c3c31cb0a58f7f9a}
+      \strng{authornamehash}{7a7512afe601c883c3c31cb0a58f7f9a}
+      \strng{authorfullhash}{7a7512afe601c883c3c31cb0a58f7f9a}
+      \strng{authorfullhashraw}{7a7512afe601c883c3c31cb0a58f7f9a}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{shorttitle}
+      \field{abstract}{Prvi dio knjige Povijest znanosti: Vrlo kratak pregled donosi sažetu povijest zapadne znanosti od antičkih temelja do suvremenosti, s naglaskom na kritikama znanosti s kraja 20. stoljeća i promjenama u znanju 21. stoljeća. Drugi dio, Retorika znanosti i akademsko pismo, osigurava teorijsko-metodološke pretpostavke knjige. Tu se raspravlja o terminu, definicijama i klasifikacijama znanosti, o znanstvenim žanrovima, o temeljnim pojmovima klasične retorike i suvremenoj retorici znanosti, koja je omogućila definiciju akademskoga pisma i poslužila kao metodički okvir knjige. Treći dio, Strategije i tehnike akademskoga pisma, pragmatične je naravi. To je glavni, najopsežniji dio knjige. Zamišljen je kao tehnička pomoć u rješavanju konkretnih zadaća u procesu znanstvenoga istraživanja i pisanja akademske proze. Podijeljen je u sedam poglavlja, a svako je od njih posvećeno određenomu retoričkom kanonu, dijelu kanona ili tehnikama pisanja: Pripreme za pisanje (Invencija), Struktura i dijelovi (Dispozicija), Odlomak i konektori (Argumentacija), Jezik i stil (Elokucija), Citiranje i citati (Memorija), Dva citatna stila (Velika mehanika) te napokon Posljednji koraci (završna redakcija teksta). Osim s retoričkim kanonima studentice i studenti upoznaju se s modusima argumentacije (logos, etos i patos), tehnikama za oblikovanje kairós, stásis i tópoi, a posebna je pozornost posvećena citatnim stilovima i mehanici teksta.}
+      \field{isbn}{978-953-303-357-0}
+      \field{langid}{croatian}
+      \field{pagetotal}{681}
+      \field{shorttitle}{Akademsko pismo}
+      \field{title}{Akademsko pismo: Strategije i tehnike klasične retorike za suvremene studentice i studente}
+      \field{year}{2011}
+      \field{dateera}{ce}
+      \verb{urlraw}
+      \verb https://www.bib.irb.hr/538431
+      \endverb
+      \verb{url}
+      \verb https://www.bib.irb.hr/538431
+      \endverb
+    \endentry
+    \entry{russell2022ArtificialIntelligenceModern}{book}{}{}
+      \name{editor}{2}{}{%
+        {{hash=18ee0a7bfc995f40254c9d425c977a49}{%
+           family={Russell},
+           familyi={R\bibinitperiod},
+           given={Stuart\bibnamedelima J.},
+           giveni={S\bibinitperiod\bibinitdelim J\bibinitperiod}}}%
+        {{hash=5de798d5fa3c0236c0478134cd23f52a}{%
+           family={Norvig},
+           familyi={N\bibinitperiod},
+           given={Peter},
+           giveni={P\bibinitperiod}}}%
+      }
+      \name{editora}{9}{}{%
+        {{hash=f49c9a715cf7b34c69d223e49d9a6615}{%
+           family={Chang},
+           familyi={C\bibinitperiod},
+           given={{Ming-wei}},
+           giveni={M\bibinitperiod}}}%
+        {{hash=13202969e372bc82318f9629cbdd199b}{%
+           family={Devlin},
+           familyi={D\bibinitperiod},
+           given={Jacob},
+           giveni={J\bibinitperiod}}}%
+        {{hash=ac56afa5bcb9a863ab4555f3ac357ef5}{%
+           family={Dragan},
+           familyi={D\bibinitperiod},
+           given={Anca},
+           giveni={A\bibinitperiod}}}%
+        {{hash=751a9393d43438966f829203de48f8d4}{%
+           family={Forsyth},
+           familyi={F\bibinitperiod},
+           given={David},
+           giveni={D\bibinitperiod}}}%
+        {{hash=5d2585c11210cf1d4512e6e0a03ec315}{%
+           family={Goodfellow},
+           familyi={G\bibinitperiod},
+           given={Ian},
+           giveni={I\bibinitperiod}}}%
+        {{hash=c75a5377b6dc5213831576e88ffe553c}{%
+           family={Malik},
+           familyi={M\bibinitperiod},
+           given={Jitendra},
+           giveni={J\bibinitperiod}}}%
+        {{hash=6344a34b41329229e12264c8385f71d7}{%
+           family={Mansinghka},
+           familyi={M\bibinitperiod},
+           given={Vikash},
+           giveni={V\bibinitperiod}}}%
+        {{hash=809f695b398afbb54b544c49e8d1bbbb}{%
+           family={Pearl},
+           familyi={P\bibinitperiod},
+           given={Judea},
+           giveni={J\bibinitperiod}}}%
+        {{hash=96d27c6553195bb84981618808020d91}{%
+           family={Woolridge},
+           familyi={W\bibinitperiod},
+           given={Michael},
+           giveni={M\bibinitperiod}}}%
+      }
+      \list{location}{1}{%
+        {Harlow, UK}%
+      }
+      \list{publisher}{1}{%
+        {Pearson Education Limited}%
+      }
+      \strng{namehash}{a4f50258a14156905c8d2b1b4704be30}
+      \strng{fullhash}{a4f50258a14156905c8d2b1b4704be30}
+      \strng{fullhashraw}{a4f50258a14156905c8d2b1b4704be30}
+      \strng{bibnamehash}{a4f50258a14156905c8d2b1b4704be30}
+      \strng{editorbibnamehash}{a4f50258a14156905c8d2b1b4704be30}
+      \strng{editornamehash}{a4f50258a14156905c8d2b1b4704be30}
+      \strng{editorfullhash}{a4f50258a14156905c8d2b1b4704be30}
+      \strng{editorfullhashraw}{a4f50258a14156905c8d2b1b4704be30}
+      \strng{editorabibnamehash}{dc665469316a026c1d853330edf75393}
+      \strng{editoranamehash}{dc665469316a026c1d853330edf75393}
+      \strng{editorafullhash}{fa988aa04f70b8507408d4d19c4268c6}
+      \strng{editorafullhashraw}{fa988aa04f70b8507408d4d19c4268c6}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{labelnamesource}{editor}
+      \field{labeltitlesource}{shorttitle}
+      \field{abstract}{"Updated edition of popular textbook on Artificial Intelligence. This edition specific looks at ways of keeping artificial intelligence under control"}
+      \field{edition}{4}
+      \field{editoratype}{collaborator}
+      \field{isbn}{978-1-292-40113-3}
+      \field{langid}{english}
+      \field{pagetotal}{1166}
+      \field{series}{Pearson {{Series}} in {{Artificial Intelligence}}}
+      \field{shorttitle}{Artificial {{Intelligence}}}
+      \field{title}{Artificial {{Intelligence}}: {{A Modern Approach}}}
+      \field{year}{2022}
+      \field{dateera}{ce}
+      \verb{file}
+      \verb /home/bogdan/Documents/Literatura/Bib/Russell, Norvig - 2022 - Artificial Intelligence - A Modern Approach.pdf
+      \endverb
+    \endentry
+    \entry{wooldridge2009IntroductionMultiAgentSystems}{book}{}{}
+      \name{author}{1}{}{%
+        {{hash=1dbead6bb535576afc14adfe5a5c42bb}{%
+           family={Wooldridge},
+           familyi={W\bibinitperiod},
+           given={Michael},
+           giveni={M\bibinitperiod}}}%
+      }
+      \list{location}{1}{%
+        {Glasgow, UK}%
+      }
+      \list{publisher}{1}{%
+        {John Wiley \& Sons Ltd.}%
+      }
+      \strng{namehash}{1dbead6bb535576afc14adfe5a5c42bb}
+      \strng{fullhash}{1dbead6bb535576afc14adfe5a5c42bb}
+      \strng{fullhashraw}{1dbead6bb535576afc14adfe5a5c42bb}
+      \strng{bibnamehash}{1dbead6bb535576afc14adfe5a5c42bb}
+      \strng{authorbibnamehash}{1dbead6bb535576afc14adfe5a5c42bb}
+      \strng{authornamehash}{1dbead6bb535576afc14adfe5a5c42bb}
+      \strng{authorfullhash}{1dbead6bb535576afc14adfe5a5c42bb}
+      \strng{authorfullhashraw}{1dbead6bb535576afc14adfe5a5c42bb}
+      \field{sortinit}{4}
+      \field{sortinithash}{9381316451d1b9788675a07e972a12a7}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{The study of multi-agent systems (MAS) focuses on systems in which many intelligent agents interact with each other. These agents are considered to be autonomous entities such as software programs or robots. Their interactions can either be cooperative (for example as in an ant colony) or selfish (as in a free market economy). This book assumes only basic knowledge of algorithms and discrete maths, both of which are taught as standard in the first or second year of computer science degree programmes. A basic knowledge of artificial intelligence would useful to help understand some of the issues, but is not essential.}
+      \field{edition}{2}
+      \field{isbn}{978-0-470-51946-2}
+      \field{pagetotal}{484}
+      \field{title}{An {{Introduction}} to {{MultiAgent Systems}}}
+      \field{year}{2009}
+      \field{dateera}{ce}
+      \verb{urlraw}
+      \verb http://www.cs.ox.ac.uk/people/michael.wooldridge/pubs/imas/IMAS2e.html
+      \endverb
+      \verb{url}
+      \verb http://www.cs.ox.ac.uk/people/michael.wooldridge/pubs/imas/IMAS2e.html
+      \endverb
+    \endentry
+    \entry{sveucilisteuzagrebufakultetorganizacijeiinformatike2017FOIPreporukeCitiranja}{misc}{}{}
+      \name{author}{1}{}{%
+        {{hash=edea118de37ae6788be34f290cd4a924}{%
+           family={{Sveučilište u Zagrebu, Fakultet organizacije i informatike}},
+           familyi={S\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Sveučilište u Zagrebu, Fakultet organizacije i informatike}%
+      }
+      \strng{namehash}{edea118de37ae6788be34f290cd4a924}
+      \strng{fullhash}{edea118de37ae6788be34f290cd4a924}
+      \strng{fullhashraw}{edea118de37ae6788be34f290cd4a924}
+      \strng{bibnamehash}{edea118de37ae6788be34f290cd4a924}
+      \strng{authorbibnamehash}{edea118de37ae6788be34f290cd4a924}
+      \strng{authornamehash}{edea118de37ae6788be34f290cd4a924}
+      \strng{authorfullhash}{edea118de37ae6788be34f290cd4a924}
+      \strng{authorfullhashraw}{edea118de37ae6788be34f290cd4a924}
+      \field{sortinit}{8}
+      \field{sortinithash}{a231b008ebf0ecbe0b4d96dcc159445f}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{langid}{croatian}
+      \field{month}{11}
+      \field{title}{FOI: Preporuke citiranja i referenciranja primjenom stila referenciranja IEEE}
+      \field{year}{2017}
+      \field{dateera}{ce}
+      \verb{urlraw}
+      \verb https://radovi.foi.hr/build/files/Preporuke_citiranja_i_referenciranja_primjenom_stila_referenciranja_IEEE.pdf
+      \endverb
+      \verb{url}
+      \verb https://radovi.foi.hr/build/files/Preporuke_citiranja_i_referenciranja_primjenom_stila_referenciranja_IEEE.pdf
+      \endverb
+    \endentry
+    \entry{schatten2020PlatformeZaOrkestraciju}{inproceedings}{}{}
+      \name{author}{3}{}{%
+        {{hash=ba6cffcafe213279258212e61af0c237}{%
+           family={Schatten},
+           familyi={S\bibinitperiod},
+           given={Markus},
+           giveni={M\bibinitperiod}}}%
+        {{hash=9fb13032caf749057b7bee3be075b43a}{%
+           family={Okreša\bibnamedelima Ðurić},
+           familyi={O\bibinitperiod\bibinitdelim Ð\bibinitperiod},
+           given={Bogdan},
+           giveni={B\bibinitperiod}}}%
+        {{hash=271887985ca457655f61fabcae0ee5db}{%
+           family={Tomičić},
+           familyi={T\bibinitperiod},
+           given={Igor},
+           giveni={I\bibinitperiod}}}%
+      }
+      \name{editor}{3}{}{%
+        {{hash=12189f15ec9917d39d09ca7ad8143971}{%
+           family={Strahonja},
+           familyi={S\bibinitperiod},
+           given={Vjeran},
+           giveni={V\bibinitperiod}}}%
+        {{hash=5ea8332d8e101546c4d0610bc26e385b}{%
+           family={Steingartner},
+           familyi={S\bibinitperiod},
+           given={William},
+           giveni={W\bibinitperiod}}}%
+        {{hash=8041bbcb45efbc9e93a7a1fc8821e336}{%
+           family={Kirinić},
+           familyi={K\bibinitperiod},
+           given={Valentina},
+           giveni={V\bibinitperiod}}}%
+      }
+      \list{location}{1}{%
+        {Varaždin, HR}%
+      }
+      \list{publisher}{1}{%
+        {Faculty of Organization and Informatics, University of Zagreb}%
+      }
+      \strng{namehash}{b67d5b2ea32cdc830671cf4fcfffda00}
+      \strng{fullhash}{5eb1c41dbb347651e91cc60b2b6cef7b}
+      \strng{fullhashraw}{5eb1c41dbb347651e91cc60b2b6cef7b}
+      \strng{bibnamehash}{5eb1c41dbb347651e91cc60b2b6cef7b}
+      \strng{authorbibnamehash}{5eb1c41dbb347651e91cc60b2b6cef7b}
+      \strng{authornamehash}{b67d5b2ea32cdc830671cf4fcfffda00}
+      \strng{authorfullhash}{5eb1c41dbb347651e91cc60b2b6cef7b}
+      \strng{authorfullhashraw}{5eb1c41dbb347651e91cc60b2b6cef7b}
+      \strng{editorbibnamehash}{8b6773764c907521f6a14ebfa292978a}
+      \strng{editornamehash}{9096a5684dbff5c6d4e35e296a882e9c}
+      \strng{editorfullhash}{8b6773764c907521f6a14ebfa292978a}
+      \strng{editorfullhashraw}{8b6773764c907521f6a14ebfa292978a}
+      \field{extraname}{1}
+      \field{sortinit}{9}
+      \field{sortinithash}{0a5ebc79d83c96b6579069544c73c7d4}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{Central European Conference on Information and Intelligent Systems}
+      \field{day}{7}
+      \field{endday}{9}
+      \field{endmonth}{10}
+      \field{endyear}{2020}
+      \field{eventtitle}{Central European Conference on Information and Intelligent Systems}
+      \field{issn}{1848-2295}
+      \field{langid}{croatian}
+      \field{month}{10}
+      \field{title}{Platforme za orkestraciju hibridne umjetne inteligencije u računalnim igrama –{} konceptualni model}
+      \field{year}{2020}
+      \field{enddateera}{ce}
+      \field{dateera}{ce}
+      \field{pages}{3\bibrangedash 8}
+      \range{pages}{6}
+    \endentry
+    \entry{okresaduric2019ModellingFormingTemporary}{inproceedings}{}{}
+      \name{author}{2}{}{%
+        {{hash=9fb13032caf749057b7bee3be075b43a}{%
+           family={Okreša\bibnamedelima Ðurić},
+           familyi={O\bibinitperiod\bibinitdelim Ð\bibinitperiod},
+           given={Bogdan},
+           giveni={B\bibinitperiod}}}%
+        {{hash=271887985ca457655f61fabcae0ee5db}{%
+           family={Tomičić},
+           familyi={T\bibinitperiod},
+           given={Igor},
+           giveni={I\bibinitperiod}}}%
+      }
+      \name{editor}{2}{}{%
+        {{hash=12189f15ec9917d39d09ca7ad8143971}{%
+           family={Strahonja},
+           familyi={S\bibinitperiod},
+           given={Vjeran},
+           giveni={V\bibinitperiod}}}%
+        {{hash=8041bbcb45efbc9e93a7a1fc8821e336}{%
+           family={Kirinić},
+           familyi={K\bibinitperiod},
+           given={Valentina},
+           giveni={V\bibinitperiod}}}%
+      }
+      \list{location}{1}{%
+        {Varaždin, HR}%
+      }
+      \list{publisher}{1}{%
+        {Faculty of Organization and Informatics, University of Zagreb}%
+      }
+      \strng{namehash}{c9a0db2db518905e1a7273262d0db83d}
+      \strng{fullhash}{c9a0db2db518905e1a7273262d0db83d}
+      \strng{fullhashraw}{c9a0db2db518905e1a7273262d0db83d}
+      \strng{bibnamehash}{c9a0db2db518905e1a7273262d0db83d}
+      \strng{authorbibnamehash}{c9a0db2db518905e1a7273262d0db83d}
+      \strng{authornamehash}{c9a0db2db518905e1a7273262d0db83d}
+      \strng{authorfullhash}{c9a0db2db518905e1a7273262d0db83d}
+      \strng{authorfullhashraw}{c9a0db2db518905e1a7273262d0db83d}
+      \strng{editorbibnamehash}{2512925f2443160a84f0e49c42f4c165}
+      \strng{editornamehash}{2512925f2443160a84f0e49c42f4c165}
+      \strng{editorfullhash}{2512925f2443160a84f0e49c42f4c165}
+      \strng{editorfullhashraw}{2512925f2443160a84f0e49c42f4c165}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{This work presents coalition-forming methods within the environment of a massively multi-player online role-playing game (MMORPG), since coalitions, both of short- and long-spanned existence, are important for players of such a game genre insomuch that in some scenarios completing the long-term complex tasks (game quests) is not possible without using a coalition of players. The coalition-forming method based on the complementary skillsets is further enhanced with the recipeWorld, which can simulate the emergence of networks out of decentralized autonomous agent interaction. The ideas presented herein are tentative work, and are meant for showing the possible applications of coalition forming through the lens of recipeWorld modelling methods in multiagent systems (MAS) applied to MMORPG domain.}
+      \field{booktitle}{Proceedings of the {{Central European Conference}} on {{Information}} and {{Intelligent Systems}}}
+      \field{day}{2}
+      \field{endday}{4}
+      \field{endmonth}{10}
+      \field{endyear}{2019}
+      \field{eventtitle}{Central {{European Conference}} on {{Information}} and {{Intelligent Systems}}}
+      \field{issn}{1848-2295}
+      \field{langid}{english}
+      \field{month}{10}
+      \field{title}{Modelling {{Forming}} of {{Temporary Coalitions}} in the {{Context}} of {{Massively Multiplayer Online Role}}-{{Playing Games}}}
+      \field{year}{2019}
+      \field{enddateera}{ce}
+      \field{dateera}{ce}
+      \field{pages}{7\bibrangedash 12}
+      \range{pages}{6}
+    \endentry
+    \entry{SchattenEtAl2016roadmap}{article}{}{}
+      \name{author}{3}{}{%
+        {{hash=ba6cffcafe213279258212e61af0c237}{%
+           family={Schatten},
+           familyi={S\bibinitperiod},
+           given={Markus},
+           giveni={M\bibinitperiod}}}%
+        {{hash=d6c12e3427a23cc838f942dfa2249e2e}{%
+           family={Ševa},
+           familyi={Š\bibinitperiod},
+           given={Jurica},
+           giveni={J\bibinitperiod}}}%
+        {{hash=271887985ca457655f61fabcae0ee5db}{%
+           family={Tomičić},
+           familyi={T\bibinitperiod},
+           given={Igor},
+           giveni={I\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Elsevier}%
+      }
+      \strng{namehash}{b67d5b2ea32cdc830671cf4fcfffda00}
+      \strng{fullhash}{35d3080a28f535544c13cd495655b694}
+      \strng{fullhashraw}{35d3080a28f535544c13cd495655b694}
+      \strng{bibnamehash}{35d3080a28f535544c13cd495655b694}
+      \strng{authorbibnamehash}{35d3080a28f535544c13cd495655b694}
+      \strng{authornamehash}{b67d5b2ea32cdc830671cf4fcfffda00}
+      \strng{authorfullhash}{35d3080a28f535544c13cd495655b694}
+      \strng{authorfullhashraw}{35d3080a28f535544c13cd495655b694}
+      \field{extraname}{2}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Journal of Systems and Software}
+      \field{title}{A roadmap for scalable agent organizations in the Internet of Everything}
+      \field{volume}{115}
+      \field{year}{2016}
+      \field{pages}{31\bibrangedash 41}
+      \range{pages}{11}
+    \endentry
+    \entry{rincon2017InfluencingPeopleSocial}{article}{useprefix=true}{}
+      \name{author}{5}{}{%
+        {{hash=46a75274dbaf0130864d0decf3cf87a2}{%
+           family={Rincon},
+           familyi={R\bibinitperiod},
+           given={J.A.},
+           giveni={J\bibinitperiod}}}%
+        {{hash=622b22cce5888f685f2416c3f159b420}{%
+           family={Prieta},
+           familyi={P\bibinitperiod},
+           given={F.},
+           giveni={F\bibinitperiod},
+           prefix={de\bibnamedelima la},
+           prefixi={d\bibinitperiod\bibinitdelim l\bibinitperiod}}}%
+        {{hash=7086b71123982a1c3d7ce41cfb84ae0e}{%
+           family={Zanardini},
+           familyi={Z\bibinitperiod},
+           given={D.},
+           giveni={D\bibinitperiod}}}%
+        {{hash=34c5cdb1df5c3d8af9a9536358d1348a}{%
+           family={Julian},
+           familyi={J\bibinitperiod},
+           given={V.},
+           giveni={V\bibinitperiod}}}%
+        {{hash=7a1d63ac7a97ae2e0e6c72667ba91b42}{%
+           family={Carrascosa},
+           familyi={C\bibinitperiod},
+           given={C.},
+           giveni={C\bibinitperiod}}}%
+      }
+      \strng{namehash}{9d0c65a7157fda028ab0b5b9c26d44ef}
+      \strng{fullhash}{090224d93f132db1c9e63373992c63b4}
+      \strng{fullhashraw}{090224d93f132db1c9e63373992c63b4}
+      \strng{bibnamehash}{090224d93f132db1c9e63373992c63b4}
+      \strng{authorbibnamehash}{090224d93f132db1c9e63373992c63b4}
+      \strng{authornamehash}{9d0c65a7157fda028ab0b5b9c26d44ef}
+      \strng{authorfullhash}{090224d93f132db1c9e63373992c63b4}
+      \strng{authorfullhashraw}{090224d93f132db1c9e63373992c63b4}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{This paper presents an approach of a social emotional model, which allows to extract the social emotion of a group of intelligent entities. The emotional model PAD allows to represent the emotion of an intelligent entity in 3-D space, allowing the representation of different emotional states. The social emotional model presented in this paper uses individual emotions of each one of the entities, which are represented in the emotional space PAD. Using a social emotional model within intelligent entities allows the creation of more real simulations, in which emotional states can influence decision-making. The result of this social emotional mode is represented by a series of examples, which are intended to represent a number of situations in which the emotions of each individual modify the emotion of the group. Moreover, the paper introduces an example which employs the proposed model in order to learn and predict future actions trying to influence in the social emotion of a group of people.}
+      \field{issn}{09252312}
+      \field{journaltitle}{Neurocomputing}
+      \field{langid}{english}
+      \field{month}{3}
+      \field{shortjournal}{Neurocomputing}
+      \field{title}{Influencing {{Over People}} with a {{Social Emotional Model}}}
+      \field{volume}{231}
+      \field{year}{2017}
+      \field{dateera}{ce}
+      \field{pages}{47\bibrangedash 54}
+      \range{pages}{8}
+      \verb{doi}
+      \verb 10.1016/j.neucom.2016.03.107
+      \endverb
+    \endentry
+    \entry{copeland2020ArtificialIntelligence}{online}{}{}
+      \name{author}{1}{}{%
+        {{hash=5a6cef81119bca750086c6acc11dbfed}{%
+           family={Copeland},
+           familyi={C\bibinitperiod},
+           given={B.J.},
+           giveni={B\bibinitperiod}}}%
+      }
+      \list{organization}{1}{%
+        {Britannica}%
+      }
+      \strng{namehash}{5a6cef81119bca750086c6acc11dbfed}
+      \strng{fullhash}{5a6cef81119bca750086c6acc11dbfed}
+      \strng{fullhashraw}{5a6cef81119bca750086c6acc11dbfed}
+      \strng{bibnamehash}{5a6cef81119bca750086c6acc11dbfed}
+      \strng{authorbibnamehash}{5a6cef81119bca750086c6acc11dbfed}
+      \strng{authornamehash}{5a6cef81119bca750086c6acc11dbfed}
+      \strng{authorfullhash}{5a6cef81119bca750086c6acc11dbfed}
+      \strng{authorfullhashraw}{5a6cef81119bca750086c6acc11dbfed}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Artificial Intelligence}
+      \field{urlday}{15}
+      \field{urlmonth}{9}
+      \field{urlyear}{2020}
+      \field{year}{2020}
+      \field{dateera}{ce}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://www.britannica.com/technology/artificial-intelligence
+      \endverb
+      \verb{url}
+      \verb https://www.britannica.com/technology/artificial-intelligence
+      \endverb
+    \endentry
+  \enddatalist
+\endrefsection
+\endinput
+
