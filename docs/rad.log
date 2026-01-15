@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.28 (MiKTeX 25.12) (preloaded format=pdflatex 2026.1.15)  15 JAN 2026 21:18
+This is pdfTeX, Version 3.141592653-2.6-1.40.28 (MiKTeX 25.12) (preloaded format=pdflatex 2026.1.15)  15 JAN 2026 21:19
 entering extended mode
  \write18 enabled.
  file:line:error style messages enabled.
@@ -908,6 +908,13 @@ Package biblatex Warning: The following entry could not be found
 
 Package biblatex Warning: The following entry could not be found
 (biblatex)                in the database:
+(biblatex)                elmasri2016fundamentals
+(biblatex)                Please verify the spelling and rerun
+(biblatex)                LaTeX afterwards.
+
+
+Package biblatex Warning: The following entry could not be found
+(biblatex)                in the database:
 (biblatex)                grinberg2018Flask
 (biblatex)                Please verify the spelling and rerun
 (biblatex)                LaTeX afterwards.
@@ -916,6 +923,13 @@ Package biblatex Warning: The following entry could not be found
 Package biblatex Warning: The following entry could not be found
 (biblatex)                in the database:
 (biblatex)                postgresqlDocs2023
+(biblatex)                Please verify the spelling and rerun
+(biblatex)                LaTeX afterwards.
+
+
+Package biblatex Warning: The following entry could not be found
+(biblatex)                in the database:
+(biblatex)                sandhu1996rolebased
 (biblatex)                Please verify the spelling and rerun
 (biblatex)                LaTeX afterwards.
 
@@ -936,4 +950,155 @@ LaTeX Font Info:    Font shape `T1/phv/m/it' in size <10.95> not available
 (Font)              Font shape `T1/phv/m/sl' tried instead on input line 78.
  [1] [2] (rad.toc
 LaTeX Font Info:    Trying to load font information for U+msa on input line 2.
- (C:\Users\Korisnik\AppData\Local\Programs
+ (C:\Users\Korisnik\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\umsa.fd
+File: umsa.fd 2013/01/14 v3.01 AMS symbols A
+)
+LaTeX Font Info:    Trying to load font information for U+msb on input line 2.
+ (C:\Users\Korisnik\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\umsb.fd
+File: umsb.fd 2013/01/14 v3.01 AMS symbols B
+))
+\tf@toc=\write7
+\openout7 = `rad.toc'.
+
+ [3
+
+]
+Poglavlje 1.
+Package newfloat Info: Setting Plan B file extension to `lof'... on input line 87.
+
+LaTeX Warning: Citation 'postgresqlDocs2023' on page 1 undefined on input line 93.
+
+
+LaTeX Warning: Citation 'grinberg2018Flask' on page 1 undefined on input line 93.
+
+
+pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.100 \chapter
+              {Opis aplikacijske domene} [1
+
+]
+Poglavlje 2.
+
+LaTeX Warning: Citation 'behl2017cybersecurity' on page 2 undefined on input line 108.
+
+[2
+
+]
+Poglavlje 3.
+
+LaTeX Warning: Citation 'elmasri2016fundamentals' on page 3 undefined on input line 115.
+
+
+LaTeX Warning: Citation 'sandhu1996rolebased' on page 3 undefined on input line 121.
+
+[3
+
+] [4]
+Poglavlje 4.
+LaTeX Font Info:    Trying to load font information for TS1+phv on input line 156.
+(C:\Users\Korisnik\AppData\Local\Programs\MiKTeX\tex/latex/psnfss\ts1phv.fd
+File: ts1phv.fd 2020/03/25 scalable font definitions for TS1/phv.
+) [5
+
+]
+
+LaTeX Warning: No positions in optional float specifier.
+               Default added (so using `tbp') on input line 209.
+
+<slike/slika.png, id=169, 766.36313pt x 258.9675pt>
+File: slike/slika.png Graphic file (type png)
+<use slike/slika.png>
+Package pdftex.def Info: slike/slika.png  used on input line 211.
+(pdftex.def)             Requested size: 409.71692pt x 138.45337pt.
+[6 <./slike/slika.png>]
+\pydata@fh@0=\write8
+\openout8 = `_340F7C2DCAEDEAE68E4A62C281C7350B.data.minted'.
+
+runsystem(latexminted config  --timestamp 20260115211927 340F7C2DCAEDEAE68E4A62C281C7350B)...executed.
+
+ (_340F7C2DCAEDEAE68E4A62C281C7350B.config.minted)
+runsystem(latexminted cleanconfig  --timestamp 20260115211927 340F7C2DCAEDEAE68E4A62C281C7350B)...executed.
+
+ (_minted/default.style.minted) (_minted/49122FC4773F5B79A484FB912360ECC5.highlight.minted
+LaTeX Font Info:    Trying to load font information for T1+pcr on input line 1.
+ (C:\Users\Korisnik\AppData\Local\Programs\MiKTeX\tex/latex/psnfss\t1pcr.fd
+File: t1pcr.fd 2001/06/04 font definitions for T1/pcr.
+)
+LaTeX Font Info:    Font shape `T1/pcr/m/it' in size <9> not available
+(Font)              Font shape `T1/pcr/m/sl' tried instead on input line 8.
+)
+Package hyperref Info: bookmark level for unknown listing defaults to 0 on input line 268.
+ (_minted/D7BCD4E4C9ECAB963EB12A1FEA2ABD54.highlight.minted) (_minted/3DAE72AB726B8CE787D3384C423C62D0.highlight.minted
+LaTeX Font Info:    Trying to load font information for TS1+pcr on input line 3.
+ (C:\Users\Korisnik\AppData\Local\Programs\MiKTeX\tex/latex/psnfss\ts1pcr.fd
+File: ts1pcr.fd 2001/06/04 font definitions for TS1/pcr.
+)) (_minted/237BA787E6DB663656D134898A7C27A2.highlight.minted) (_minted/3EC81DBE50615A2E08EC41364CC8DF1A.highlight.minted) [7] (_minted/ADD80D3212057AF0643BE7A81BF66A68.highlight.minted) (_minted/3BEDB1AD99356C60AFFDCA82B95AC873.highlight.minted) (_minted/165006A8E0D8A325A7AB08042AC5EDBB.highlight.minted) (_minted/98A992DB5BA9F766E01D2DFFE065F912.highlight.minted) (_minted/E66E2F8AB5CA3F66C165A0A37AD30D71.highlight.minted)
+Package acronym Info: Label `acro:VAS' newly defined as it shall be overridden
+although it is yet undefined on input line 299.
+ (_minted/12C1F9054B49BC1438DBBEFBDA765C18.highlight.minted) [8] (_minted/4D5BAE8DF191624F018A9B6E2EE6A71C.highlight.minted) (_minted/19E175D7AFAAC0AD70AC3CD0FBCC07F2.highlight.minted) [9]
+Poglavlje 5.
+[10
+
+]
+Overfull \hbox (0.45746pt too wide) in paragraph at lines 341--341
+[]\T1/phv/m/n/10.95 B. Co-pe-land. ^^R  Ar-ti-fi-cial In-tel-li-gence,^^Q Bri-tan-nica, po-gle-dano 15. rujna 2020. adresa: []$\T1/pcr/m/n/10.95 https :
+ []
+
+[11
+
+] (rad.lof)
+\tf@lof=\write9
+\openout9 = `rad.lof'.
+
+ [12
+
+] (rad.lot)
+\tf@lot=\write10
+\openout10 = `rad.lot'.
+
+ [13
+
+] (rad.lol)
+\tf@lol=\write11
+\openout11 = `rad.lol'.
+
+ [14
+
+] [15
+
+]
+Dodatak 1.
+[16
+
+]
+Dodatak 2.
+[17
+
+] (rad.aux)
+ ***********
+LaTeX2e <2025-11-01>
+L3 programming layer <2025-12-29>
+ ***********
+Package rerunfilecheck Info: File `rad.out' has not changed.
+(rerunfilecheck)             Checksum: EB1E0C852630BDE2B375D35D89054035;3591.
+Package logreq Info: Writing requests to 'rad.run.xml'.
+\openout1 = `rad.run.xml'.
+
+ ) 
+Here is how much of TeX's memory you used:
+ 30340 strings out of 467871
+ 582051 string characters out of 5416924
+ 1624835 words of memory out of 5000000
+ 58690 multiletter control sequences out of 15000+600000
+ 686421 words of font info for 105 fonts, out of 8000000 for 9000
+ 1141 hyphenation exceptions out of 8191
+ 89i,12n,97p,1650b,2427s stack positions out of 10000i,1000n,20000p,200000b,200000s
+<C:/Users/Korisnik/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Users/Korisnik/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi6.pfb><C:/Users/Korisnik/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/Korisnik/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Users/Korisnik/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy6.pfb><C:/Users/Korisnik/AppData/Local/Programs/MiKTeX/fonts/type1/urw/courier/ucrb8a.pfb><C:/Users/Korisnik/AppData/Local/Programs/MiKTeX/fonts/type1/urw/courier/ucrr8a.pfb><C:/Users/Korisnik/AppData/Local/Programs/MiKTeX/fonts/type1/urw/courier/ucrro8a.pfb><C:/Users/Korisnik/AppData/Local/Programs/MiKTeX/fonts/type1/urw/helvetic/uhvb8a.pfb><C:/Users/Korisnik/AppData/Local/Programs/MiKTeX/fonts/type1/urw/helvetic/uhvr8a.pfb><C:/Users/Korisnik/AppData/Local/Programs/MiKTeX/fonts/type1/urw/helvetic/uhvro8a.pfb>
+Output written on rad.pdf (22 pages, 182540 bytes).
+PDF statistics:
+ 336 PDF objects out of 1000 (max. 8388607)
+ 61 named destinations out of 1000 (max. 500000)
+ 198 words of extra memory for PDF output out of 10000 (max. 10000000)
+

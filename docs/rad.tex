@@ -110,9 +110,15 @@ Posebna značajka domene je vođenje audit zapisa. Svaka važna promjena u susta
 
 
 
-\chapter{Razrada teme}
+\chapter{Teorijski uvod}
 
-Ovo je glavni dio rada u kojem treba razraditi temu, pojasniti istraživanja, prikazati rezultate i slično. Poželjno je na početku poglavlja dati kratki opis strukture poglavlja, kako bi čitatelj/čitateljica rada mogao/mogla lakše pratiti složenu cjelinu.
+Objektno-relacijske baze podataka predstavljaju proširenje klasičnih relacijskih baza koje uz standardne relacijske koncepte podržavaju i naprednije strukture podataka. Takav pristup omogućuje jednostavnije modeliranje složenijih domena, uz zadržavanje prednosti relacijskog modela poput transakcijske sigurnosti i SQL jezika \cite{elmasri2016fundamentals}.
+
+U okviru ovog projekta korištena je objektno-relacijska baza podataka PostgreSQL. PostgreSQL podržava napredne mehanizme poput pogleda, okidača i funkcija, koji omogućuju implementaciju dijela poslovne logike izravno u bazi podataka. Time se smanjuje opterećenje aplikacijskog sloja i osigurava konzistentnost podataka neovisno o načinu pristupa bazi.
+
+U usporedbi s objektno-orijentiranim bazama podataka, objektno-relacijski pristup zadržava jednostavnost relacijskog modela i bolju kompatibilnost s postojećim alatima. S druge strane, u odnosu na čisto relacijske baze, objektno-relacijske baze nude veću fleksibilnost pri modeliranju kompleksnijih odnosa i pravila. Nedostatak ovog pristupa može biti veća složenost dizajna baze i potreba za boljim razumijevanjem naprednih SQL koncepata.
+
+Za kontrolu pristupa u aplikaciji korišten je RBAC model (Role-Based Access Control). U tom modelu korisnicima se ne dodjeljuju izravno dozvole, već se one dodjeljuju ulogama koje korisnici posjeduju. Ovakav pristup pojednostavljuje upravljanje pravima i olakšava proširenje sustava novim ulogama \cite{sandhu1996rolebased}.
 
 
 

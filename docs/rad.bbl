@@ -97,8 +97,8 @@
       \strng{editoranamehash}{dc665469316a026c1d853330edf75393}
       \strng{editorafullhash}{fa988aa04f70b8507408d4d19c4268c6}
       \strng{editorafullhashraw}{fa988aa04f70b8507408d4d19c4268c6}
-      \field{sortinit}{4}
-      \field{sortinithash}{9381316451d1b9788675a07e972a12a7}
+      \field{sortinit}{6}
+      \field{sortinithash}{b33bc299efb3c36abec520a4c896a66d}
       \field{labelnamesource}{editor}
       \field{labeltitlesource}{shorttitle}
       \field{abstract}{"Updated edition of popular textbook on Artificial Intelligence. This edition specific looks at ways of keeping artificial intelligence under control"}
@@ -138,8 +138,8 @@
       \strng{authornamehash}{1dbead6bb535576afc14adfe5a5c42bb}
       \strng{authorfullhash}{1dbead6bb535576afc14adfe5a5c42bb}
       \strng{authorfullhashraw}{1dbead6bb535576afc14adfe5a5c42bb}
-      \field{sortinit}{6}
-      \field{sortinithash}{b33bc299efb3c36abec520a4c896a66d}
+      \field{sortinit}{8}
+      \field{sortinithash}{a231b008ebf0ecbe0b4d96dcc159445f}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{abstract}{The study of multi-agent systems (MAS) focuses on systems in which many intelligent agents interact with each other. These agents are considered to be autonomous entities such as software programs or robots. Their interactions can either be cooperative (for example as in an ant colony) or selfish (as in a free market economy). This book assumes only basic knowledge of algorithms and discrete maths, both of which are taught as standard in the first or second year of computer science degree programmes. A basic knowledge of artificial intelligence would useful to help understand some of the issues, but is not essential.}
@@ -506,8 +506,10 @@
     \endentry
   \enddatalist
   \missing{behl2017cybersecurity}
+  \missing{elmasri2016fundamentals}
   \missing{grinberg2018Flask}
   \missing{postgresqlDocs2023}
+  \missing{sandhu1996rolebased}
 \endrefsection
 \endinput
 

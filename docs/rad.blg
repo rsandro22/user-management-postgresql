@@ -1,18 +1,20 @@
 [0] Config.pm:328> INFO - This is Biber 2.21
 [0] Config.pm:331> INFO - Logfile is 'rad.blg'
-[172] biber-MSWIN64:342> INFO - === 
-[223] Biber.pm:421> INFO - Reading 'rad.bcf'
-[392] Biber.pm:1002> INFO - Found 12 citekeys in bib section 0
-[413] Biber.pm:4487> INFO - Processing section 0
-[429] Biber.pm:4678> INFO - Looking for bibtex file 'lib.bib' for section 0
-[524] bibtex.pm:1713> INFO - LaTeX decoding ...
-[571] bibtex.pm:1519> INFO - Found BibTeX data source 'lib.bib'
-[735] UCollate.pm:68> INFO - Overriding locale 'hr-HR' defaults 'variable = shifted' with 'variable = non-ignorable'
-[735] UCollate.pm:68> INFO - Overriding locale 'hr-HR' defaults 'normalization = NFD' with 'normalization = prenormalized'
-[735] Biber.pm:4307> INFO - Sorting list 'none/global//global/global/global' of type 'entry' with template 'none' and locale 'hr-HR'
-[751] bbl.pm:676> INFO - Writing 'rad.bbl' with encoding 'UTF-8'
-[762] bbl.pm:779> INFO - Output to rad.bbl
-[763] Biber.pm:132> WARN - I didn't find a database entry for 'postgresqlDocs2023' (section 0)
-[763] Biber.pm:132> WARN - I didn't find a database entry for 'grinberg2018Flask' (section 0)
-[763] Biber.pm:132> WARN - I didn't find a database entry for 'behl2017cybersecurity' (section 0)
-[763] Biber.pm:134> INFO - WARNINGS: 3
+[194] biber-MSWIN64:342> INFO - === 
+[251] Biber.pm:421> INFO - Reading 'rad.bcf'
+[456] Biber.pm:1002> INFO - Found 14 citekeys in bib section 0
+[478] Biber.pm:4487> INFO - Processing section 0
+[496] Biber.pm:4678> INFO - Looking for bibtex file 'lib.bib' for section 0
+[594] bibtex.pm:1713> INFO - LaTeX decoding ...
+[660] bibtex.pm:1519> INFO - Found BibTeX data source 'lib.bib'
+[888] UCollate.pm:68> INFO - Overriding locale 'hr-HR' defaults 'variable = shifted' with 'variable = non-ignorable'
+[888] UCollate.pm:68> INFO - Overriding locale 'hr-HR' defaults 'normalization = NFD' with 'normalization = prenormalized'
+[888] Biber.pm:4307> INFO - Sorting list 'none/global//global/global/global' of type 'entry' with template 'none' and locale 'hr-HR'
+[918] bbl.pm:676> INFO - Writing 'rad.bbl' with encoding 'UTF-8'
+[934] bbl.pm:779> INFO - Output to rad.bbl
+[934] Biber.pm:132> WARN - I didn't find a database entry for 'postgresqlDocs2023' (section 0)
+[935] Biber.pm:132> WARN - I didn't find a database entry for 'grinberg2018Flask' (section 0)
+[935] Biber.pm:132> WARN - I didn't find a database entry for 'behl2017cybersecurity' (section 0)
+[935] Biber.pm:132> WARN - I didn't find a database entry for 'elmasri2016fundamentals' (section 0)
+[935] Biber.pm:132> WARN - I didn't find a database entry for 'sandhu1996rolebased' (section 0)
+[935] Biber.pm:134> INFO - WARNINGS: 5
