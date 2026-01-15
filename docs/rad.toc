@@ -17,9 +17,9 @@
 \contentsline {subsection}{\numberline {4.1.8}Strano nazivlje}{8}{subsection.4.1.8}%
 \contentsline {section}{\numberline {4.2}Navođenje literature}{8}{section.4.2}%
 \contentsline {chapter}{\numberline {5}Zaključak}{10}{chapter.5}%
-\contentsline {chapter}{Popis literature}{11}{chapter*.7}%
-\contentsline {chapter}{Popis slika}{12}{chapter*.8}%
-\contentsline {chapter}{Popis tablica}{13}{chapter*.9}%
-\contentsline {chapter}{Popis isječaka koda}{14}{chapter*.10}%
-\contentsline {chapter}{\numberline {1}Prilog 1}{16}{appendix.A}%
-\contentsline {chapter}{\numberline {2}Prilog 2}{17}{appendix.B}%
+\contentsline {chapter}{Popis literature}{12}{chapter*.7}%
+\contentsline {chapter}{Popis slika}{13}{chapter*.8}%
+\contentsline {chapter}{Popis tablica}{14}{chapter*.9}%
+\contentsline {chapter}{Popis isječaka koda}{15}{chapter*.10}%
+\contentsline {chapter}{\numberline {1}Prilog 1}{17}{appendix.A}%
+\contentsline {chapter}{\numberline {2}Prilog 2}{18}{appendix.B}%

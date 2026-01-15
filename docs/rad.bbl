@@ -19,6 +19,160 @@
 
 \refsection{0}
   \datalist[entry]{none/global//global/global/global}
+    \entry{postgresqlDocs2023}{misc}{}{}
+      \name{author}{1}{}{%
+        {{hash=36423acfb135ffe286ea438eafcb0bc6}{%
+           family={{PostgreSQL Global Development Group}},
+           familyi={P\bibinitperiod}}}%
+      }
+      \strng{namehash}{36423acfb135ffe286ea438eafcb0bc6}
+      \strng{fullhash}{36423acfb135ffe286ea438eafcb0bc6}
+      \strng{fullhashraw}{36423acfb135ffe286ea438eafcb0bc6}
+      \strng{bibnamehash}{36423acfb135ffe286ea438eafcb0bc6}
+      \strng{authorbibnamehash}{36423acfb135ffe286ea438eafcb0bc6}
+      \strng{authornamehash}{36423acfb135ffe286ea438eafcb0bc6}
+      \strng{authorfullhash}{36423acfb135ffe286ea438eafcb0bc6}
+      \strng{authorfullhashraw}{36423acfb135ffe286ea438eafcb0bc6}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{howpublished}{\url{https://www.postgresql.org/docs/}}
+      \field{note}{Accessed: 2026-01-10}
+      \field{title}{PostgreSQL Documentation}
+      \field{year}{2023}
+    \endentry
+    \entry{grinberg2018Flask}{book}{}{}
+      \name{author}{1}{}{%
+        {{hash=eeba7ae00fae9a99a709f6f40abb3917}{%
+           family={Grinberg},
+           familyi={G\bibinitperiod},
+           given={Miguel},
+           giveni={M\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {O'Reilly Media}%
+      }
+      \strng{namehash}{eeba7ae00fae9a99a709f6f40abb3917}
+      \strng{fullhash}{eeba7ae00fae9a99a709f6f40abb3917}
+      \strng{fullhashraw}{eeba7ae00fae9a99a709f6f40abb3917}
+      \strng{bibnamehash}{eeba7ae00fae9a99a709f6f40abb3917}
+      \strng{authorbibnamehash}{eeba7ae00fae9a99a709f6f40abb3917}
+      \strng{authornamehash}{eeba7ae00fae9a99a709f6f40abb3917}
+      \strng{authorfullhash}{eeba7ae00fae9a99a709f6f40abb3917}
+      \strng{authorfullhashraw}{eeba7ae00fae9a99a709f6f40abb3917}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{edition}{2}
+      \field{title}{Flask Web Development}
+      \field{year}{2018}
+    \endentry
+    \entry{behl2017cybersecurity}{book}{}{}
+      \name{author}{1}{}{%
+        {{hash=dfe82f459a8f16cd175db216b0636ef0}{%
+           family={Behl},
+           familyi={B\bibinitperiod},
+           given={Abhijit},
+           giveni={A\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Oxford University Press}%
+      }
+      \strng{namehash}{dfe82f459a8f16cd175db216b0636ef0}
+      \strng{fullhash}{dfe82f459a8f16cd175db216b0636ef0}
+      \strng{fullhashraw}{dfe82f459a8f16cd175db216b0636ef0}
+      \strng{bibnamehash}{dfe82f459a8f16cd175db216b0636ef0}
+      \strng{authorbibnamehash}{dfe82f459a8f16cd175db216b0636ef0}
+      \strng{authornamehash}{dfe82f459a8f16cd175db216b0636ef0}
+      \strng{authorfullhash}{dfe82f459a8f16cd175db216b0636ef0}
+      \strng{authorfullhashraw}{dfe82f459a8f16cd175db216b0636ef0}
+      \field{sortinit}{3}
+      \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Cybersecurity and Cyberwar}
+      \field{year}{2017}
+    \endentry
+    \entry{elmasri2016fundamentals}{book}{}{}
+      \name{author}{2}{}{%
+        {{hash=c7e2fe1a0e649bf469f3feb7c5aa840d}{%
+           family={Elmasri},
+           familyi={E\bibinitperiod},
+           given={Ramez},
+           giveni={R\bibinitperiod}}}%
+        {{hash=4ae94109c6efa1688beb655559324ba2}{%
+           family={Navathe},
+           familyi={N\bibinitperiod},
+           given={Shamkant\bibnamedelima B.},
+           giveni={S\bibinitperiod\bibinitdelim B\bibinitperiod}}}%
+      }
+      \list{location}{1}{%
+        {Boston}%
+      }
+      \list{publisher}{1}{%
+        {Pearson}%
+      }
+      \strng{namehash}{2e8829be23557c692dac07b198a7df6e}
+      \strng{fullhash}{2e8829be23557c692dac07b198a7df6e}
+      \strng{fullhashraw}{2e8829be23557c692dac07b198a7df6e}
+      \strng{bibnamehash}{2e8829be23557c692dac07b198a7df6e}
+      \strng{authorbibnamehash}{2e8829be23557c692dac07b198a7df6e}
+      \strng{authornamehash}{2e8829be23557c692dac07b198a7df6e}
+      \strng{authorfullhash}{2e8829be23557c692dac07b198a7df6e}
+      \strng{authorfullhashraw}{2e8829be23557c692dac07b198a7df6e}
+      \field{sortinit}{4}
+      \field{sortinithash}{9381316451d1b9788675a07e972a12a7}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{edition}{7}
+      \field{title}{Fundamentals of Database Systems}
+      \field{year}{2016}
+    \endentry
+    \entry{sandhu1996rolebased}{article}{}{}
+      \name{author}{4}{}{%
+        {{hash=f3b7d57399ba1dbf13fcbf28b2ad7555}{%
+           family={Sandhu},
+           familyi={S\bibinitperiod},
+           given={Ravi\bibnamedelima S.},
+           giveni={R\bibinitperiod\bibinitdelim S\bibinitperiod}}}%
+        {{hash=095a4cce348eec9d581b278c22ab6129}{%
+           family={Coyne},
+           familyi={C\bibinitperiod},
+           given={Edward\bibnamedelima J.},
+           giveni={E\bibinitperiod\bibinitdelim J\bibinitperiod}}}%
+        {{hash=777d2f53710ab0c09bf75c63fafceaa1}{%
+           family={Feinstein},
+           familyi={F\bibinitperiod},
+           given={Hal\bibnamedelima L.},
+           giveni={H\bibinitperiod\bibinitdelim L\bibinitperiod}}}%
+        {{hash=fea1de53df3d07042f925374a93d347e}{%
+           family={Youman},
+           familyi={Y\bibinitperiod},
+           given={Charles\bibnamedelima E.},
+           giveni={C\bibinitperiod\bibinitdelim E\bibinitperiod}}}%
+      }
+      \strng{namehash}{52a6131784323a5e6bed6b08eea50cb3}
+      \strng{fullhash}{10d614baecb582aa4916c475ba89caef}
+      \strng{fullhashraw}{10d614baecb582aa4916c475ba89caef}
+      \strng{bibnamehash}{10d614baecb582aa4916c475ba89caef}
+      \strng{authorbibnamehash}{10d614baecb582aa4916c475ba89caef}
+      \strng{authornamehash}{52a6131784323a5e6bed6b08eea50cb3}
+      \strng{authorfullhash}{10d614baecb582aa4916c475ba89caef}
+      \strng{authorfullhashraw}{10d614baecb582aa4916c475ba89caef}
+      \field{sortinit}{5}
+      \field{sortinithash}{20e9b4b0b173788c5dace24730f47d8c}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{IEEE Computer}
+      \field{number}{2}
+      \field{title}{Role-Based Access Control Models}
+      \field{volume}{29}
+      \field{year}{1996}
+      \field{pages}{38\bibrangedash 47}
+      \range{pages}{10}
+    \endentry
     \entry{russell2022ArtificialIntelligenceModern}{book}{}{}
       \name{editor}{2}{}{%
         {{hash=18ee0a7bfc995f40254c9d425c977a49}{%
@@ -505,11 +659,6 @@
       \endverb
     \endentry
   \enddatalist
-  \missing{behl2017cybersecurity}
-  \missing{elmasri2016fundamentals}
-  \missing{grinberg2018Flask}
-  \missing{postgresqlDocs2023}
-  \missing{sandhu1996rolebased}
 \endrefsection
 \endinput
 

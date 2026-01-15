@@ -1,12 +1,13 @@
 # Fdb version 4
-["biber rad"] 1768508357.16723 "rad.bcf" "rad.bbl" "rad" 1768508373.85968 0
+["biber rad"] 1768508692.33854 "rad.bcf" "rad.bbl" "rad" 1768508716.85852 0
   "lib.bib" 1768505614 11757 1e9ff256d563a9b129a67710d653d54b ""
-  "rad.bcf" 1768508373 109789 cad90d94441da2d18899dbd3e72b5de8 "pdflatex"
+  "literatura.bib" 1768508655 1143 887c40a3867395a5915dbe1cf5b97466 ""
+  "rad.bcf" 1768508716 109884 7fe7b34df769b2c5bbc85cde21e89691 "pdflatex"
   (generated)
   "rad.bbl"
   "rad.blg"
   (rewritten before read)
-["pdflatex"] 1768508367.14805 "c:/Users/Korisnik/Desktop/user-management-postgresql/docs/rad.tex" "rad.pdf" "rad" 1768508373.86086 0
+["pdflatex"] 1768508709.98766 "c:/Users/Korisnik/Desktop/user-management-postgresql/docs/rad.tex" "rad.pdf" "rad" 1768508716.85959 0
   "C:/Users/Korisnik/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map" 1768506457 82507 a9eef8696c92627b87e9975edea03b2a ""
   "C:/Users/Korisnik/AppData/Local/MiKTeX/miktex/data/le/pdftex/pdflatex.fmt" 1768506285 13334939 e0c9ea460a02ba3c4d84d2789642aca4 ""
   "C:/Users/Korisnik/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/base/8r.enc" 1458473887 4993 80dc9bab7f31fb78a000ccfed0e27cab ""
@@ -208,17 +209,17 @@
   "_minted/E66E2F8AB5CA3F66C165A0A37AD30D71.highlight.minted" 1768506708 98 7c75144f69308b168ca120b70d7ef519 ""
   "_minted/_340F7C2DCAEDEAE68E4A62C281C7350B.index.minted" 1768506708 966 72a2863fa2c7bf83754f741331e1154c ""
   "_minted/default.style.minted" 1768506708 6526 e1fb43a91491f41b33310478eee48cdb ""
-  "c:/Users/Korisnik/Desktop/user-management-postgresql/docs/rad.tex" 1768508349 19965 1deb32d47b6fd271b3b76f7ce806e78b ""
+  "c:/Users/Korisnik/Desktop/user-management-postgresql/docs/rad.tex" 1768508685 20049 45eeb7fd2e1d52c0097ff00d7e162894 ""
   "foi.cls" 1768505592 15017 564d6ea9faaf77a36f74613831ec2ea7 ""
-  "rad.aux" 1768508373 9038 6e6a027630890acafdf32499727cabaa "pdflatex"
-  "rad.bbl" 1768508360 25091 2fd3f420ec0869678ab8fb60c2081201 "biber rad"
-  "rad.lof" 1768508373 372 3669d241f00f3a4de6a4129cd150b9f0 "pdflatex"
-  "rad.lol" 1768508373 356 a924c657bb7c8f108269de4515349d10 "pdflatex"
-  "rad.lot" 1768508373 381 06ef202ef9c2b6d7db31ee52738f4e73 "pdflatex"
-  "rad.out" 1768508373 3591 eb1e0c852630bde2b375d35d89054035 "pdflatex"
-  "rad.run.xml" 1768508373 2389 9ea17f6c1229f1f2409339160b7eae2f "pdflatex"
-  "rad.tex" 1768508349 19965 1deb32d47b6fd271b3b76f7ce806e78b ""
-  "rad.toc" 1768508373 1834 54a769875aa13ab1f05e1cac6b0e66dc "pdflatex"
+  "rad.aux" 1768508716 9471 feb0a77ea96f832f7c967a46406b080e "pdflatex"
+  "rad.bbl" 1768508695 31583 677498d035d835c507733433ac451f28 "biber rad"
+  "rad.lof" 1768508716 372 3669d241f00f3a4de6a4129cd150b9f0 "pdflatex"
+  "rad.lol" 1768508716 356 a924c657bb7c8f108269de4515349d10 "pdflatex"
+  "rad.lot" 1768508716 381 06ef202ef9c2b6d7db31ee52738f4e73 "pdflatex"
+  "rad.out" 1768508716 3591 eb1e0c852630bde2b375d35d89054035 "pdflatex"
+  "rad.run.xml" 1768508716 2423 591a89c82fc69036655651cc0f2de34d "pdflatex"
+  "rad.tex" 1768508685 20049 45eeb7fd2e1d52c0097ff00d7e162894 ""
+  "rad.toc" 1768508716 1834 43a0d68d9033e21a846e9c037f67dca9 "pdflatex"
   "slike/slika.png" 1768506639 2220 931fa90b83dadc4c9c6e762f7d7069bb ""
   (generated)
   "rad.aux"
