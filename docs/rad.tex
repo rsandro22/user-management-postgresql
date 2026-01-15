@@ -16,7 +16,7 @@
 % \projekt is a project
 
 \title{Aplikacija za upravljanje korisničkim računima u objektno-relacijskoj bazi (PostgreSQL) s web sučeljem}
-\predmet{}
+\predmet{\predmetTBP}
 % ostaviti prazno ako \vrstaRada nije \projekt ili \seminar
 % \predmetBP ili \predmetDP ili \predmetTBP ili \predmetVAS ili \predmetUUI
 % leave it empty if \vrstaRada is not a \projekt or \seminar
@@ -86,20 +86,27 @@
 
 \chapter{Uvod}
 
-U suvremenim informacijskim sustavima upravljanje korisničkim računima predstavlja temeljni sigurnosni i organizacijski problem. Gotovo svaka aplikacija koja obrađuje osjetljive ili poslovno važne podatke mora omogućiti autentikaciju korisnika, kontrolu pristupa resursima te praćenje aktivnosti korisnika u sustavu.
+Upravljanje korisničkim računima i kontrola pristupa predstavljaju temeljni dio gotovo svake suvremene aplikacije. Sustavi koji obrađuju povjerljive podatke ili omogućuju rad većem broju korisnika moraju jasno definirati tko ima pravo pristupa pojedinim funkcionalnostima sustava. Nepravilno postavljena prava pristupa mogu dovesti do sigurnosnih problema, neovlaštenih izmjena podataka ili gubitka povjerenja u sustav.
 
-Tema ovog rada je razvoj aplikacije za upravljanje korisničkim računima koja podržava različite vrste korisnika, definiranje uloga i prava pristupa te vođenje zapisa o aktivnostima korisnika (audit log). Aplikacija je implementirana korištenjem objektno-relacijske baze podataka PostgreSQL te web aplikacijskog okvira Flask.
+U ovom projektu razvijena je web aplikacija za upravljanje korisničkim računima koja omogućuje definiranje korisnika, dodjelu uloga i pripadajućih dozvola te evidenciju aktivnosti korisnika kroz audit zapise. Aplikacija je implementirana korištenjem objektno-relacijske baze podataka PostgreSQL i web aplikacijskog okvira Flask. Poseban naglasak stavljen je na korištenje naprednih mogućnosti baze podataka, poput okidača (engl. \textit{triggers}) i pogleda (engl. \textit{views}), kako bi se dio logike sustava realizirao izravno na razini baze.
 
-Motivacija za odabir teme proizlazi iz česte potrebe za pouzdanim i proširivim mehanizmom kontrole pristupa u poslovnim i informacijskim sustavima. Umjesto dodjeljivanja prava pojedinim korisnicima, primijenjen je RBAC (Role-Based Access Control) pristup koji omogućuje jednostavnije upravljanje autorizacijom i veću fleksibilnost sustava.
-\cite{oraictolic2011AkademskoPismoStrategije}.
+Motivacija za izradu ovog projekta proizlazi iz potrebe za jednostavnim, ali funkcionalnim sustavom za upravljanje korisnicima kakav se često susreće u manjim i srednjim aplikacijama. Umjesto korištenja složenih gotovih rješenja, cilj je bio izraditi sustav koji jasno demonstrira osnovne koncepte kontrole pristupa i objektno-relacijskog pristupa bazama podataka. PostgreSQL je odabran zbog svoje stabilnosti, podrške za napredne SQL značajke i široke primjene u praksi \cite{postgresqlDocs2023}. Flask je korišten kao lagani web okvir koji omogućuje brzu izradu pregledne aplikacije uz minimalnu količinu koda \cite{grinberg2018Flask}.
+
+Cilj rada je prikazati cjelokupan postupak izrade ovakvog sustava, od teorijskih osnova i modeliranja baze podataka, preko implementacije, pa sve do primjera korištenja i evaluacije rješenja.
 
 
 
-\chapter{Metode i tehnike rada}
 
-U ovom poglavlju treba opisati koje će metode i tehnike biti korištene pri razradi teme, kako su provedene istraživačke aktivnosti, koji su programski alati ili aplikacije korišteni.
+\chapter{Opis aplikacijske domene}
 
-\lipsum[1-2]
+Aplikacijska domena ovog projekta odnosi se na sustave za upravljanje korisničkim računima i njihovim pravima pristupa. Takvi sustavi koriste se u gotovo svim informacijskim aplikacijama koje imaju više korisnika s različitim razinama ovlasti. Cilj ovakvih sustava je osigurati da svaki korisnik može izvršavati samo one akcije koje su mu dopuštene.
+
+U razvijenoj aplikaciji definirane su tri osnovne vrste korisnika: administrator, obični korisnik i auditor. Administrator ima najvišu razinu ovlasti te može dodavati i brisati korisnike, dodjeljivati im uloge i pregledavati sve podatke u sustavu. Obični korisnik ima ograničen pristup, koji se svodi na pregled podataka za koje ima dozvolu. Auditor ima specifičnu ulogu – nema mogućnost izmjene podataka, ali ima pravo pregleda audit zapisa, čime se osigurava nadzor nad aktivnostima u sustavu.
+
+Temeljni koncepti aplikacijske domene su korisnik, uloga i dozvola. Korisnik predstavlja entitet koji se autentificira u sustav, dok uloga definira skup dozvola koje korisnik posjeduje. Dozvole određuju koje akcije su dopuštene, poput pregleda korisnika, dodavanja novih korisnika ili pregleda audit zapisa. Između korisnika i uloga uspostavljena je veza tipa više-prema-više, čime je omogućena fleksibilna kontrola pristupa.
+
+Posebna značajka domene je vođenje audit zapisa. Svaka važna promjena u sustavu, poput dodavanja ili brisanja korisnika, automatski se bilježi u posebnoj tablici. Time se omogućuje praćenje aktivnosti i naknadna analiza događaja, što je posebno važno u sustavima gdje je sigurnost bitan faktor \cite{behl2017cybersecurity}.
+
 
 
 

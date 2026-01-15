@@ -19,47 +19,6 @@
 
 \refsection{0}
   \datalist[entry]{none/global//global/global/global}
-    \entry{oraictolic2011AkademskoPismoStrategije}{book}{}{}
-      \name{author}{1}{}{%
-        {{hash=7a7512afe601c883c3c31cb0a58f7f9a}{%
-           family={Oraić\bibnamedelima Tolić},
-           familyi={O\bibinitperiod\bibinitdelim T\bibinitperiod},
-           given={Dubravka},
-           giveni={D\bibinitperiod}}}%
-      }
-      \list{location}{1}{%
-        {Zagreb, HR}%
-      }
-      \list{publisher}{1}{%
-        {Naklada Ljevak}%
-      }
-      \strng{namehash}{7a7512afe601c883c3c31cb0a58f7f9a}
-      \strng{fullhash}{7a7512afe601c883c3c31cb0a58f7f9a}
-      \strng{fullhashraw}{7a7512afe601c883c3c31cb0a58f7f9a}
-      \strng{bibnamehash}{7a7512afe601c883c3c31cb0a58f7f9a}
-      \strng{authorbibnamehash}{7a7512afe601c883c3c31cb0a58f7f9a}
-      \strng{authornamehash}{7a7512afe601c883c3c31cb0a58f7f9a}
-      \strng{authorfullhash}{7a7512afe601c883c3c31cb0a58f7f9a}
-      \strng{authorfullhashraw}{7a7512afe601c883c3c31cb0a58f7f9a}
-      \field{sortinit}{1}
-      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{shorttitle}
-      \field{abstract}{Prvi dio knjige Povijest znanosti: Vrlo kratak pregled donosi sažetu povijest zapadne znanosti od antičkih temelja do suvremenosti, s naglaskom na kritikama znanosti s kraja 20. stoljeća i promjenama u znanju 21. stoljeća. Drugi dio, Retorika znanosti i akademsko pismo, osigurava teorijsko-metodološke pretpostavke knjige. Tu se raspravlja o terminu, definicijama i klasifikacijama znanosti, o znanstvenim žanrovima, o temeljnim pojmovima klasične retorike i suvremenoj retorici znanosti, koja je omogućila definiciju akademskoga pisma i poslužila kao metodički okvir knjige. Treći dio, Strategije i tehnike akademskoga pisma, pragmatične je naravi. To je glavni, najopsežniji dio knjige. Zamišljen je kao tehnička pomoć u rješavanju konkretnih zadaća u procesu znanstvenoga istraživanja i pisanja akademske proze. Podijeljen je u sedam poglavlja, a svako je od njih posvećeno određenomu retoričkom kanonu, dijelu kanona ili tehnikama pisanja: Pripreme za pisanje (Invencija), Struktura i dijelovi (Dispozicija), Odlomak i konektori (Argumentacija), Jezik i stil (Elokucija), Citiranje i citati (Memorija), Dva citatna stila (Velika mehanika) te napokon Posljednji koraci (završna redakcija teksta). Osim s retoričkim kanonima studentice i studenti upoznaju se s modusima argumentacije (logos, etos i patos), tehnikama za oblikovanje kairós, stásis i tópoi, a posebna je pozornost posvećena citatnim stilovima i mehanici teksta.}
-      \field{isbn}{978-953-303-357-0}
-      \field{langid}{croatian}
-      \field{pagetotal}{681}
-      \field{shorttitle}{Akademsko pismo}
-      \field{title}{Akademsko pismo: Strategije i tehnike klasične retorike za suvremene studentice i studente}
-      \field{year}{2011}
-      \field{dateera}{ce}
-      \verb{urlraw}
-      \verb https://www.bib.irb.hr/538431
-      \endverb
-      \verb{url}
-      \verb https://www.bib.irb.hr/538431
-      \endverb
-    \endentry
     \entry{russell2022ArtificialIntelligenceModern}{book}{}{}
       \name{editor}{2}{}{%
         {{hash=18ee0a7bfc995f40254c9d425c977a49}{%
@@ -138,8 +97,8 @@
       \strng{editoranamehash}{dc665469316a026c1d853330edf75393}
       \strng{editorafullhash}{fa988aa04f70b8507408d4d19c4268c6}
       \strng{editorafullhashraw}{fa988aa04f70b8507408d4d19c4268c6}
-      \field{sortinit}{2}
-      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{sortinit}{4}
+      \field{sortinithash}{9381316451d1b9788675a07e972a12a7}
       \field{labelnamesource}{editor}
       \field{labeltitlesource}{shorttitle}
       \field{abstract}{"Updated edition of popular textbook on Artificial Intelligence. This edition specific looks at ways of keeping artificial intelligence under control"}
@@ -179,8 +138,8 @@
       \strng{authornamehash}{1dbead6bb535576afc14adfe5a5c42bb}
       \strng{authorfullhash}{1dbead6bb535576afc14adfe5a5c42bb}
       \strng{authorfullhashraw}{1dbead6bb535576afc14adfe5a5c42bb}
-      \field{sortinit}{4}
-      \field{sortinithash}{9381316451d1b9788675a07e972a12a7}
+      \field{sortinit}{6}
+      \field{sortinithash}{b33bc299efb3c36abec520a4c896a66d}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{abstract}{The study of multi-agent systems (MAS) focuses on systems in which many intelligent agents interact with each other. These agents are considered to be autonomous entities such as software programs or robots. Their interactions can either be cooperative (for example as in an ant colony) or selfish (as in a free market economy). This book assumes only basic knowledge of algorithms and discrete maths, both of which are taught as standard in the first or second year of computer science degree programmes. A basic knowledge of artificial intelligence would useful to help understand some of the issues, but is not essential.}
@@ -214,8 +173,8 @@
       \strng{authornamehash}{edea118de37ae6788be34f290cd4a924}
       \strng{authorfullhash}{edea118de37ae6788be34f290cd4a924}
       \strng{authorfullhashraw}{edea118de37ae6788be34f290cd4a924}
-      \field{sortinit}{8}
-      \field{sortinithash}{a231b008ebf0ecbe0b4d96dcc159445f}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{langid}{croatian}
@@ -284,8 +243,8 @@
       \strng{editorfullhash}{8b6773764c907521f6a14ebfa292978a}
       \strng{editorfullhashraw}{8b6773764c907521f6a14ebfa292978a}
       \field{extraname}{1}
-      \field{sortinit}{9}
-      \field{sortinithash}{0a5ebc79d83c96b6579069544c73c7d4}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{booktitle}{Central European Conference on Information and Intelligent Systems}
@@ -303,6 +262,47 @@
       \field{dateera}{ce}
       \field{pages}{3\bibrangedash 8}
       \range{pages}{6}
+    \endentry
+    \entry{oraictolic2011AkademskoPismoStrategije}{book}{}{}
+      \name{author}{1}{}{%
+        {{hash=7a7512afe601c883c3c31cb0a58f7f9a}{%
+           family={Oraić\bibnamedelima Tolić},
+           familyi={O\bibinitperiod\bibinitdelim T\bibinitperiod},
+           given={Dubravka},
+           giveni={D\bibinitperiod}}}%
+      }
+      \list{location}{1}{%
+        {Zagreb, HR}%
+      }
+      \list{publisher}{1}{%
+        {Naklada Ljevak}%
+      }
+      \strng{namehash}{7a7512afe601c883c3c31cb0a58f7f9a}
+      \strng{fullhash}{7a7512afe601c883c3c31cb0a58f7f9a}
+      \strng{fullhashraw}{7a7512afe601c883c3c31cb0a58f7f9a}
+      \strng{bibnamehash}{7a7512afe601c883c3c31cb0a58f7f9a}
+      \strng{authorbibnamehash}{7a7512afe601c883c3c31cb0a58f7f9a}
+      \strng{authornamehash}{7a7512afe601c883c3c31cb0a58f7f9a}
+      \strng{authorfullhash}{7a7512afe601c883c3c31cb0a58f7f9a}
+      \strng{authorfullhashraw}{7a7512afe601c883c3c31cb0a58f7f9a}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{shorttitle}
+      \field{abstract}{Prvi dio knjige Povijest znanosti: Vrlo kratak pregled donosi sažetu povijest zapadne znanosti od antičkih temelja do suvremenosti, s naglaskom na kritikama znanosti s kraja 20. stoljeća i promjenama u znanju 21. stoljeća. Drugi dio, Retorika znanosti i akademsko pismo, osigurava teorijsko-metodološke pretpostavke knjige. Tu se raspravlja o terminu, definicijama i klasifikacijama znanosti, o znanstvenim žanrovima, o temeljnim pojmovima klasične retorike i suvremenoj retorici znanosti, koja je omogućila definiciju akademskoga pisma i poslužila kao metodički okvir knjige. Treći dio, Strategije i tehnike akademskoga pisma, pragmatične je naravi. To je glavni, najopsežniji dio knjige. Zamišljen je kao tehnička pomoć u rješavanju konkretnih zadaća u procesu znanstvenoga istraživanja i pisanja akademske proze. Podijeljen je u sedam poglavlja, a svako je od njih posvećeno određenomu retoričkom kanonu, dijelu kanona ili tehnikama pisanja: Pripreme za pisanje (Invencija), Struktura i dijelovi (Dispozicija), Odlomak i konektori (Argumentacija), Jezik i stil (Elokucija), Citiranje i citati (Memorija), Dva citatna stila (Velika mehanika) te napokon Posljednji koraci (završna redakcija teksta). Osim s retoričkim kanonima studentice i studenti upoznaju se s modusima argumentacije (logos, etos i patos), tehnikama za oblikovanje kairós, stásis i tópoi, a posebna je pozornost posvećena citatnim stilovima i mehanici teksta.}
+      \field{isbn}{978-953-303-357-0}
+      \field{langid}{croatian}
+      \field{pagetotal}{681}
+      \field{shorttitle}{Akademsko pismo}
+      \field{title}{Akademsko pismo: Strategije i tehnike klasične retorike za suvremene studentice i studente}
+      \field{year}{2011}
+      \field{dateera}{ce}
+      \verb{urlraw}
+      \verb https://www.bib.irb.hr/538431
+      \endverb
+      \verb{url}
+      \verb https://www.bib.irb.hr/538431
+      \endverb
     \endentry
     \entry{okresaduric2019ModellingFormingTemporary}{inproceedings}{}{}
       \name{author}{2}{}{%
@@ -505,6 +505,9 @@
       \endverb
     \endentry
   \enddatalist
+  \missing{behl2017cybersecurity}
+  \missing{grinberg2018Flask}
+  \missing{postgresqlDocs2023}
 \endrefsection
 \endinput
 
