@@ -1,17 +1,14 @@
 [0] Config.pm:328> INFO - This is Biber 2.21
-[1] Config.pm:331> INFO - Logfile is 'rad.blg'
-[143] biber-MSWIN64:342> INFO - === 
-[191] Biber.pm:421> INFO - Reading 'rad.bcf'
-[348] Biber.pm:1002> INFO - Found 14 citekeys in bib section 0
-[369] Biber.pm:4487> INFO - Processing section 0
-[385] Biber.pm:4678> INFO - Looking for bibtex file 'lib.bib' for section 0
-[453] bibtex.pm:1713> INFO - LaTeX decoding ...
-[494] bibtex.pm:1519> INFO - Found BibTeX data source 'lib.bib'
-[629] Biber.pm:4678> INFO - Looking for bibtex file 'literatura.bib' for section 0
-[698] bibtex.pm:1713> INFO - LaTeX decoding ...
-[719] bibtex.pm:1519> INFO - Found BibTeX data source 'literatura.bib'
-[772] UCollate.pm:68> INFO - Overriding locale 'hr-HR' defaults 'variable = shifted' with 'variable = non-ignorable'
-[772] UCollate.pm:68> INFO - Overriding locale 'hr-HR' defaults 'normalization = NFD' with 'normalization = prenormalized'
-[772] Biber.pm:4307> INFO - Sorting list 'none/global//global/global/global' of type 'entry' with template 'none' and locale 'hr-HR'
-[792] bbl.pm:676> INFO - Writing 'rad.bbl' with encoding 'UTF-8'
-[805] bbl.pm:779> INFO - Output to rad.bbl
+[0] Config.pm:331> INFO - Logfile is 'rad.blg'
+[182] biber-MSWIN64:342> INFO - === 
+[245] Biber.pm:421> INFO - Reading 'rad.bcf'
+[418] Biber.pm:1002> INFO - Found 5 citekeys in bib section 0
+[439] Biber.pm:4487> INFO - Processing section 0
+[455] Biber.pm:4678> INFO - Looking for bibtex file 'lib.bib' for section 0
+[514] bibtex.pm:1713> INFO - LaTeX decoding ...
+[525] bibtex.pm:1519> INFO - Found BibTeX data source 'lib.bib'
+[607] UCollate.pm:68> INFO - Overriding locale 'hr-HR' defaults 'variable = shifted' with 'variable = non-ignorable'
+[607] UCollate.pm:68> INFO - Overriding locale 'hr-HR' defaults 'normalization = NFD' with 'normalization = prenormalized'
+[607] Biber.pm:4307> INFO - Sorting list 'none/global//global/global/global' of type 'entry' with template 'none' and locale 'hr-HR'
+[612] bbl.pm:676> INFO - Writing 'rad.bbl' with encoding 'UTF-8'
+[616] bbl.pm:779> INFO - Output to rad.bbl

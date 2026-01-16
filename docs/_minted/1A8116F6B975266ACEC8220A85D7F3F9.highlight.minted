@@ -1,0 +1,17 @@
+\begin{MintedVerbatim}[commandchars=\\\{\}]
+\PYG{k}{CREATE}\PYG{+w}{ }\PYG{k}{OR}\PYG{+w}{ }\PYG{k}{REPLACE}\PYG{+w}{ }\PYG{k}{FUNCTION}\PYG{+w}{ }\PYG{n}{log\PYGZus{}user\PYGZus{}action}\PYG{p}{()}
+\PYG{k}{RETURNS}\PYG{+w}{ }\PYG{k}{TRIGGER}\PYG{+w}{ }\PYG{k}{AS}\PYG{+w}{ }\PYG{err}{\PYGZdl{}\PYGZdl{}}
+\PYG{k}{BEGIN}
+\PYG{+w}{  }\PYG{k}{IF}\PYG{+w}{ }\PYG{n}{TG\PYGZus{}OP}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{l+s+s1}{\PYGZsq{}INSERT\PYGZsq{}}\PYG{+w}{ }\PYG{k}{THEN}
+\PYG{+w}{    }\PYG{k}{INSERT}\PYG{+w}{ }\PYG{k}{INTO}\PYG{+w}{ }\PYG{n}{audit\PYGZus{}log}\PYG{p}{(}\PYG{n}{user\PYGZus{}id}\PYG{p}{,}\PYG{+w}{ }\PYG{n}{action}\PYG{p}{)}
+\PYG{+w}{    }\PYG{k}{VALUES}\PYG{+w}{ }\PYG{p}{(}\PYG{k}{NEW}\PYG{p}{.}\PYG{n}{id}\PYG{p}{,}\PYG{+w}{ }\PYG{l+s+s1}{\PYGZsq{}USER\PYGZus{}CREATED\PYGZsq{}}\PYG{p}{);}
+\PYG{+w}{    }\PYG{k}{RETURN}\PYG{+w}{ }\PYG{k}{NEW}\PYG{p}{;}
+\PYG{+w}{  }\PYG{k}{ELSIF}\PYG{+w}{ }\PYG{n}{TG\PYGZus{}OP}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{l+s+s1}{\PYGZsq{}DELETE\PYGZsq{}}\PYG{+w}{ }\PYG{k}{THEN}
+\PYG{+w}{    }\PYG{k}{INSERT}\PYG{+w}{ }\PYG{k}{INTO}\PYG{+w}{ }\PYG{n}{audit\PYGZus{}log}\PYG{p}{(}\PYG{n}{user\PYGZus{}id}\PYG{p}{,}\PYG{+w}{ }\PYG{n}{action}\PYG{p}{)}
+\PYG{+w}{    }\PYG{k}{VALUES}\PYG{+w}{ }\PYG{p}{(}\PYG{k}{OLD}\PYG{p}{.}\PYG{n}{id}\PYG{p}{,}\PYG{+w}{ }\PYG{l+s+s1}{\PYGZsq{}USER\PYGZus{}DELETED\PYGZsq{}}\PYG{p}{);}
+\PYG{+w}{    }\PYG{k}{RETURN}\PYG{+w}{ }\PYG{k}{OLD}\PYG{p}{;}
+\PYG{+w}{  }\PYG{k}{END}\PYG{+w}{ }\PYG{k}{IF}\PYG{p}{;}
+\PYG{+w}{  }\PYG{k}{RETURN}\PYG{+w}{ }\PYG{k}{NULL}\PYG{p}{;}
+\PYG{k}{END}\PYG{p}{;}
+\PYG{err}{\PYGZdl{}\PYGZdl{}}\PYG{+w}{ }\PYG{k}{LANGUAGE}\PYG{+w}{ }\PYG{n}{plpgsql}\PYG{p}{;}
+\end{MintedVerbatim}

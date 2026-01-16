@@ -1,25 +1,41 @@
 \babel@toc {croatian}{}\relax 
 \contentsline {chapter}{\numberline {1}Uvod}{1}{chapter.1}%
 \contentsline {chapter}{\numberline {2}Opis aplikacijske domene}{2}{chapter.2}%
-\contentsline {chapter}{\numberline {3}Teorijski uvod}{3}{chapter.3}%
-\contentsline {section}{\numberline {3.1}Poglavlje druge razine }{3}{section.3.1}%
-\contentsline {subsection}{\numberline {3.1.1}Poglavlje treće razine}{3}{subsection.3.1.1}%
-\contentsline {subsection}{\numberline {3.1.2}Poglavlje četvrte razine}{4}{subsection.3.1.2}%
-\contentsline {chapter}{\numberline {4}Tehničke upute}{5}{chapter.4}%
-\contentsline {section}{\numberline {4.1}Upute za oblikovanje izgleda rada}{5}{section.4.1}%
-\contentsline {subsection}{\numberline {4.1.1}Oblikovanje stranice}{5}{subsection.4.1.1}%
-\contentsline {subsection}{\numberline {4.1.2}Tekst rada}{5}{subsection.4.1.2}%
-\contentsline {subsection}{\numberline {4.1.3}Slike}{6}{subsection.4.1.3}%
-\contentsline {subsection}{\numberline {4.1.4}Tablice}{6}{subsection.4.1.4}%
-\contentsline {subsection}{\numberline {4.1.5}Programski kod}{7}{subsection.4.1.5}%
-\contentsline {subsection}{\numberline {4.1.6}Formule}{8}{subsection.4.1.6}%
-\contentsline {subsection}{\numberline {4.1.7}Kratice}{8}{subsection.4.1.7}%
-\contentsline {subsection}{\numberline {4.1.8}Strano nazivlje}{8}{subsection.4.1.8}%
-\contentsline {section}{\numberline {4.2}Navođenje literature}{8}{section.4.2}%
-\contentsline {chapter}{\numberline {5}Zaključak}{10}{chapter.5}%
-\contentsline {chapter}{Popis literature}{12}{chapter*.7}%
-\contentsline {chapter}{Popis slika}{13}{chapter*.8}%
-\contentsline {chapter}{Popis tablica}{14}{chapter*.9}%
-\contentsline {chapter}{Popis isječaka koda}{15}{chapter*.10}%
-\contentsline {chapter}{\numberline {1}Prilog 1}{17}{appendix.A}%
-\contentsline {chapter}{\numberline {2}Prilog 2}{18}{appendix.B}%
+\contentsline {section}{\numberline {2.1}Temeljni koncepti domene}{2}{section.2.1}%
+\contentsline {section}{\numberline {2.2}Relacije i pravila domene}{3}{section.2.2}%
+\contentsline {section}{\numberline {2.3}Audit i praćenje aktivnosti}{3}{section.2.3}%
+\contentsline {chapter}{\numberline {3}Teorijski uvod}{4}{chapter.3}%
+\contentsline {section}{\numberline {3.1}Objektno-relacijske baze podataka}{4}{section.3.1}%
+\contentsline {section}{\numberline {3.2}Primjena objektno-relacijskog pristupa u projektu}{4}{section.3.2}%
+\contentsline {section}{\numberline {3.3}RBAC model kontrole pristupa}{4}{section.3.3}%
+\contentsline {section}{\numberline {3.4}Audit kao sigurnosni mehanizam}{4}{section.3.4}%
+\contentsline {chapter}{\numberline {4}Model baze podataka}{6}{chapter.4}%
+\contentsline {section}{\numberline {4.1}Konceptualni model}{6}{section.4.1}%
+\contentsline {section}{\numberline {4.2}Opis entiteta}{6}{section.4.2}%
+\contentsline {subsection}{\numberline {4.2.1}Korisnik}{6}{subsection.4.2.1}%
+\contentsline {subsection}{\numberline {4.2.2}Uloga}{6}{subsection.4.2.2}%
+\contentsline {subsection}{\numberline {4.2.3}Dozvola}{7}{subsection.4.2.3}%
+\contentsline {subsection}{\numberline {4.2.4}Audit zapis}{7}{subsection.4.2.4}%
+\contentsline {section}{\numberline {4.3}Relacije između entiteta}{7}{section.4.3}%
+\contentsline {section}{\numberline {4.4}Logički (relacijski) model}{7}{section.4.4}%
+\contentsline {section}{\numberline {4.5}Pogledi i automatizacija}{8}{section.4.5}%
+\contentsline {chapter}{\numberline {5}Implementacija}{10}{chapter.5}%
+\contentsline {section}{\numberline {5.1}Implementacija baze podataka}{10}{section.5.1}%
+\contentsline {subsection}{\numberline {5.1.1}Pogledi (views)}{10}{subsection.5.1.1}%
+\contentsline {subsection}{\numberline {5.1.2}Audit i okidači}{10}{subsection.5.1.2}%
+\contentsline {section}{\numberline {5.2}Implementacija aplikacijskog sloja}{11}{section.5.2}%
+\contentsline {subsection}{\numberline {5.2.1}Autentikacija korisnika}{11}{subsection.5.2.1}%
+\contentsline {subsection}{\numberline {5.2.2}Autorizacija i RBAC}{11}{subsection.5.2.2}%
+\contentsline {subsection}{\numberline {5.2.3}Korisničko sučelje}{12}{subsection.5.2.3}%
+\contentsline {chapter}{\numberline {6}Primjeri korištenja}{13}{chapter.6}%
+\contentsline {section}{\numberline {6.1}Prijava korisnika u sustav}{13}{section.6.1}%
+\contentsline {section}{\numberline {6.2}Pregled početne stranice}{13}{section.6.2}%
+\contentsline {section}{\numberline {6.3}Pregled korisnika}{14}{section.6.3}%
+\contentsline {section}{\numberline {6.4}Dodavanje novog korisnika}{14}{section.6.4}%
+\contentsline {section}{\numberline {6.5}Brisanje korisnika}{14}{section.6.5}%
+\contentsline {section}{\numberline {6.6}Pregled uloga i dozvola}{15}{section.6.6}%
+\contentsline {section}{\numberline {6.7}Pregled audit zapisa}{15}{section.6.7}%
+\contentsline {chapter}{\numberline {7}Zaključak}{16}{chapter.7}%
+\contentsline {chapter}{Popis literature}{17}{chapter*.7}%
+\contentsline {chapter}{Popis slika}{18}{chapter*.8}%
+\contentsline {chapter}{Popis isječaka koda}{19}{chapter*.9}%

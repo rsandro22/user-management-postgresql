@@ -2372,31 +2372,14 @@
   <!-- SECTION 0 -->
   <bcf:bibdata section="0">
     <bcf:datasource type="file" datatype="bibtex" glob="false">lib.bib</bcf:datasource>
-    <bcf:datasource type="file" datatype="bibtex" glob="false">literatura.bib</bcf:datasource>
+    <bcf:datasource type="file" datatype="bibtex" glob="false">lib.bib</bcf:datasource>
   </bcf:bibdata>
   <bcf:section number="0">
     <bcf:citekey order="1" intorder="1">postgresqlDocs2023</bcf:citekey>
     <bcf:citekey order="2" intorder="1">grinberg2018Flask</bcf:citekey>
-    <bcf:citekey order="3" intorder="1">behl2017cybersecurity</bcf:citekey>
-    <bcf:citekey order="4" intorder="1">elmasri2016fundamentals</bcf:citekey>
-    <bcf:citekey order="5" intorder="1">sandhu1996rolebased</bcf:citekey>
-    <bcf:citekey order="6" intorder="1">russell2022ArtificialIntelligenceModern</bcf:citekey>
-    <bcf:citekey order="7" intorder="1">russell2022ArtificialIntelligenceModern</bcf:citekey>
-    <bcf:citekey order="8" intorder="1">wooldridge2009IntroductionMultiAgentSystems</bcf:citekey>
-    <bcf:citekey order="9" intorder="1">wooldridge2009IntroductionMultiAgentSystems</bcf:citekey>
-    <bcf:citekey order="10" intorder="1">russell2022ArtificialIntelligenceModern</bcf:citekey>
-    <bcf:citekey order="11" intorder="1">russell2022ArtificialIntelligenceModern</bcf:citekey>
-    <bcf:citekey order="12" intorder="1">sveucilisteuzagrebufakultetorganizacijeiinformatike2017FOIPreporukeCitiranja</bcf:citekey>
-    <bcf:citekey order="13" intorder="1">schatten2020PlatformeZaOrkestraciju</bcf:citekey>
-    <bcf:citekey order="14" intorder="1">schatten2020PlatformeZaOrkestraciju</bcf:citekey>
-    <bcf:citekey order="15" intorder="1">russell2022ArtificialIntelligenceModern</bcf:citekey>
-    <bcf:citekey order="15" intorder="2">wooldridge2009IntroductionMultiAgentSystems</bcf:citekey>
-    <bcf:citekey order="15" intorder="3">oraictolic2011AkademskoPismoStrategije</bcf:citekey>
-    <bcf:citekey order="16" intorder="1">okresaduric2019ModellingFormingTemporary</bcf:citekey>
-    <bcf:citekey order="17" intorder="1">SchattenEtAl2016roadmap</bcf:citekey>
-    <bcf:citekey order="17" intorder="2">rincon2017InfluencingPeopleSocial</bcf:citekey>
-    <bcf:citekey order="18" intorder="1">copeland2020ArtificialIntelligence</bcf:citekey>
-    <bcf:citekey order="19" intorder="1">copeland2020ArtificialIntelligence</bcf:citekey>
+    <bcf:citekey order="3" intorder="1">elmasri2016fundamentals</bcf:citekey>
+    <bcf:citekey order="4" intorder="1">sandhu1996rolebased</bcf:citekey>
+    <bcf:citekey order="5" intorder="1">behl2017cybersecurity</bcf:citekey>
   </bcf:section>
   <!-- SORTING TEMPLATES -->
   <bcf:sortingtemplate name="none">

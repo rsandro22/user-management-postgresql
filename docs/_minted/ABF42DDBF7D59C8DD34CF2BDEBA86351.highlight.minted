@@ -1,0 +1,13 @@
+\begin{MintedVerbatim}[commandchars=\\\{\}]
+\PYG{k}{def}\PYG{+w}{ }\PYG{n+nf}{permission\PYGZus{}required}\PYG{p}{(}\PYG{n}{permission}\PYG{p}{):}
+    \PYG{k}{def}\PYG{+w}{ }\PYG{n+nf}{decorator}\PYG{p}{(}\PYG{n}{f}\PYG{p}{):}
+        \PYG{n+nd}{@wraps}\PYG{p}{(}\PYG{n}{f}\PYG{p}{)}
+        \PYG{k}{def}\PYG{+w}{ }\PYG{n+nf}{wrapper}\PYG{p}{(}\PYG{o}{*}\PYG{n}{args}\PYG{p}{,} \PYG{o}{**}\PYG{n}{kwargs}\PYG{p}{):}
+            \PYG{k}{if} \PYG{l+s+s2}{\PYGZdq{}user\PYGZus{}id\PYGZdq{}} \PYG{o+ow}{not} \PYG{o+ow}{in} \PYG{n}{session}\PYG{p}{:}
+                \PYG{k}{return} \PYG{n}{redirect}\PYG{p}{(}\PYG{n}{url\PYGZus{}for}\PYG{p}{(}\PYG{l+s+s2}{\PYGZdq{}login\PYGZdq{}}\PYG{p}{))}
+            \PYG{k}{if} \PYG{n}{permission} \PYG{o+ow}{not} \PYG{o+ow}{in} \PYG{n}{session}\PYG{o}{.}\PYG{n}{get}\PYG{p}{(}\PYG{l+s+s2}{\PYGZdq{}permissions\PYGZdq{}}\PYG{p}{,} \PYG{p}{[]):}
+                \PYG{k}{return} \PYG{l+s+s2}{\PYGZdq{}Access denied\PYGZdq{}}\PYG{p}{,} \PYG{l+m+mi}{403}
+            \PYG{k}{return} \PYG{n}{f}\PYG{p}{(}\PYG{o}{*}\PYG{n}{args}\PYG{p}{,} \PYG{o}{**}\PYG{n}{kwargs}\PYG{p}{)}
+        \PYG{k}{return} \PYG{n}{wrapper}
+    \PYG{k}{return} \PYG{n}{decorator}
+\end{MintedVerbatim}
