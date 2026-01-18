@@ -3,8 +3,7 @@
 \usepackage[utf8]{inputenc}
 \usepackage{lipsum}
 \usepackage{graphicx}
-\usepackage[backend=biber,style=ieee]{biblatex}
-\usepackage{csquotes}
+\usepackage{minted}
 
 \addbibresource{lib.bib}
 
@@ -16,9 +15,9 @@
 \author{Roberto Šandro} 
 \spolStudenta{\musko} 
 
-\mentor{Bogdan Okreša Đurić}
+\mentor{Tomislav Peharda}
 \spolMentora{\musko} 
-\titulaProfesora{doc.~dr.~sc.}
+\titulaProfesora{Dr. sc. socio.}
 
 \godina{2026}
 \mjesec{siječanj}
@@ -31,7 +30,6 @@
 
 \kljucneRijeci{PostgreSQL; objektno-relacijske baze; RBAC; uloge i dozvole; okidači; pogledi; Flask; psycopg2; audit log}
 
-\acrodef{VAS}{višeagentni sustav}
 
 
 \begin{document}
@@ -135,7 +133,7 @@ U implementaciji se RBAC provodi tako da se korisniku mogu pridružiti jedna ili
 
 Audit zapis predstavlja važan sigurnosni mehanizam jer omogućuje praćenje ključnih događaja u sustavu. U ovom projektu audit se provodi na razini baze podataka pomoću okidača, koji se aktiviraju prilikom dodavanja i brisanja korisničkih računa.
 
-Svaki audit zapis sadrži informaciju o vrsti događaja i vremenu izvršenja, čime se omogućuje naknadna analiza aktivnosti. Takav pristup povećava transparentnost rada sustava i predstavlja dobru praksu u razvoju aplikacija koje upravljaju korisničkim računima \cite{behl2017cybersecurity}.
+Svaki audit zapis sadrži informaciju o vrsti događaja i vremenu izvršenja, čime se omogućuje naknadna analiza aktivnosti. Takav pristup povećava transparentnost rada sustava i predstavlja dobru praksu u razvoju aplikacija koje upravljaju korisničkim računima \cite{stallings2017security}.
 
 
 

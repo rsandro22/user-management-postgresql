@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.28 (MiKTeX 25.12) (preloaded format=pdflatex 2026.1.15)  16 JAN 2026 02:26
+This is pdfTeX, Version 3.141592653-2.6-1.40.28 (MiKTeX 25.12) (preloaded format=pdflatex 2026.1.15)  18 JAN 2026 16:00
 entering extended mode
  \write18 enabled.
  file:line:error style messages enabled.
@@ -802,30 +802,30 @@ Package csquotes Info: Checking for multilingual support...
 Package csquotes Info: ... found 'babel' package.
 Package csquotes Info: Adjusting default style.
 Package csquotes Info: Redefining alias 'default' -> 'croatian'.
-LaTeX Font Info:    Trying to load font information for T1+phv on input line 37.
+LaTeX Font Info:    Trying to load font information for T1+phv on input line 35.
  (C:\Users\Korisnik\AppData\Local\Programs\MiKTeX\tex/latex/psnfss\t1phv.fd
 File: t1phv.fd 2020/03/25 scalable font definitions for T1/phv.
 ) (rad.aux)
 \openout1 = `rad.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 37.
-LaTeX Font Info:    ... okay on input line 37.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 37.
-LaTeX Font Info:    ... okay on input line 37.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 37.
-LaTeX Font Info:    ... okay on input line 37.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 37.
-LaTeX Font Info:    ... okay on input line 37.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 37.
-LaTeX Font Info:    ... okay on input line 37.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 37.
-LaTeX Font Info:    ... okay on input line 37.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 37.
-LaTeX Font Info:    ... okay on input line 37.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 37.
-LaTeX Font Info:    ... okay on input line 37.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 37.
-LaTeX Font Info:    ... okay on input line 37.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 35.
+LaTeX Font Info:    ... okay on input line 35.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 35.
+LaTeX Font Info:    ... okay on input line 35.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 35.
+LaTeX Font Info:    ... okay on input line 35.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 35.
+LaTeX Font Info:    ... okay on input line 35.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 35.
+LaTeX Font Info:    ... okay on input line 35.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 35.
+LaTeX Font Info:    ... okay on input line 35.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 35.
+LaTeX Font Info:    ... okay on input line 35.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 35.
+LaTeX Font Info:    ... okay on input line 35.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 35.
+LaTeX Font Info:    ... okay on input line 35.
 
 *geometry* driver: auto-detecting
 *geometry* detected driver: pdftex
@@ -898,9 +898,9 @@ Package biblatex Info: Automatic encoding selection.
 Package biblatex Info: Trying to load bibliographic data...
 Package biblatex Info: ... file 'rad.bbl' found.
  (rad.bbl)
-Package biblatex Info: Reference section=0 on input line 37.
-Package biblatex Info: Reference segment=0 on input line 37.
-Package hyperref Info: Link coloring OFF on input line 37.
+Package biblatex Info: Reference section=0 on input line 35.
+Package biblatex Info: Reference segment=0 on input line 35.
+Package hyperref Info: Link coloring OFF on input line 35.
  (rad.out) (rad.out)
 \@outlinefile=\write6
 \openout6 = `rad.out'.
@@ -911,7 +911,7 @@ Package newfloat Info: Trying Plan B...
 
 {C:/Users/Korisnik/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map}{C:/Users/Korisnik/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/base/8r.enc}] [0]
 LaTeX Font Info:    Font shape `T1/phv/m/it' in size <10.95> not available
-(Font)              Font shape `T1/phv/m/sl' tried instead on input line 39.
+(Font)              Font shape `T1/phv/m/sl' tried instead on input line 37.
  [1] [2] (rad.toc
 LaTeX Font Info:    Trying to load font information for U+msa on input line 2.
  (C:\Users\Korisnik\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\umsa.fd
@@ -928,15 +928,15 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 
  [4]
 Poglavlje 1.
-Package newfloat Info: Setting Plan B file extension to `lof'... on input line 48.
-LaTeX Font Info:    Trying to load font information for TS1+phv on input line 54.
+Package newfloat Info: Setting Plan B file extension to `lof'... on input line 46.
+LaTeX Font Info:    Trying to load font information for TS1+phv on input line 52.
 (C:\Users\Korisnik\AppData\Local\Programs\MiKTeX\tex/latex/psnfss\ts1phv.fd
 File: ts1phv.fd 2020/03/25 scalable font definitions for TS1/phv.
 )
 pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.70 \chapter
+l.68 \chapter
              {Opis aplikacijske domene} [1
 
 ]
@@ -955,17 +955,17 @@ Poglavlje 4.
 <slike/ERA.png, id=271, 512.91624pt x 332.24126pt>
 File: slike/ERA.png Graphic file (type png)
 <use slike/ERA.png>
-Package pdftex.def Info: slike/ERA.png  used on input line 216.
+Package pdftex.def Info: slike/ERA.png  used on input line 214.
 (pdftex.def)             Requested size: 432.48051pt x 280.14029pt.
  [8 <./slike/ERA.png>] [9]
 Poglavlje 5.
 \pydata@fh@0=\write8
 \openout8 = `_340F7C2DCAEDEAE68E4A62C281C7350B.data.minted'.
 
-runsystem(latexminted config  --timestamp 20260116022624 340F7C2DCAEDEAE68E4A62C281C7350B)...executed.
+runsystem(latexminted config  --timestamp 20260118160024 340F7C2DCAEDEAE68E4A62C281C7350B)...executed.
 
 (_340F7C2DCAEDEAE68E4A62C281C7350B.config.minted)
-runsystem(latexminted cleanconfig  --timestamp 20260116022624 340F7C2DCAEDEAE68E4A62C281C7350B)...executed.
+runsystem(latexminted cleanconfig  --timestamp 20260118160024 340F7C2DCAEDEAE68E4A62C281C7350B)...executed.
 
  (_minted/default.style.minted) (_minted/1A8116F6B975266ACEC8220A85D7F3F9.highlight.minted
 LaTeX Font Info:    Trying to load font information for T1+pcr on input line 1.
@@ -976,7 +976,7 @@ LaTeX Font Info:    Trying to load font information for TS1+pcr on input line 5.
  (C:\Users\Korisnik\AppData\Local\Programs\MiKTeX\tex/latex/psnfss\ts1pcr.fd
 File: ts1pcr.fd 2001/06/04 font definitions for TS1/pcr.
 ))
-Package hyperref Info: bookmark level for unknown listing defaults to 0 on input line 271.
+Package hyperref Info: bookmark level for unknown listing defaults to 0 on input line 269.
 
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
@@ -992,7 +992,7 @@ Poglavlje 6.
 <slike/login.png, id=300, 409.53pt x 203.5605pt>
 File: slike/login.png Graphic file (type png)
 <use slike/login.png>
-Package pdftex.def Info: slike/login.png  used on input line 335.
+Package pdftex.def Info: slike/login.png  used on input line 333.
 (pdftex.def)             Requested size: 364.19667pt x 181.03781pt.
 [13
 
@@ -1000,13 +1000,18 @@ Package pdftex.def Info: slike/login.png  used on input line 335.
 <slike/korisnici.png, id=308, 1149.093pt x 498.06075pt>
 File: slike/korisnici.png Graphic file (type png)
 <use slike/korisnici.png>
-Package pdftex.def Info: slike/korisnici.png  used on input line 361.
+Package pdftex.def Info: slike/korisnici.png  used on input line 359.
 (pdftex.def)             Requested size: 432.48051pt x 187.4563pt.
  [14 <./slike/korisnici.png>] [15]
 Poglavlje 7.
 [16
 
-] [17
+]
+Overfull \hbox (54.56142pt too wide) in paragraph at lines 397--397
+\T1/pcr/m/n/10.95 pageplace . de / preview / DT0400 . 9781292154916 _ A37747529 / preview -[] 9781292154916 _
+ []
+
+[17
 
 ] (rad.lof)
 \tf@lof=\write9
@@ -1032,17 +1037,17 @@ Package logreq Info: Writing requests to 'rad.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 30247 strings out of 467871
- 575770 string characters out of 5416924
- 1623263 words of memory out of 5000000
- 58625 multiletter control sequences out of 15000+600000
+ 30243 strings out of 467871
+ 575714 string characters out of 5416924
+ 1623191 words of memory out of 5000000
+ 58621 multiletter control sequences out of 15000+600000
  676659 words of font info for 95 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  89i,12n,97p,1254b,2323s stack positions out of 10000i,1000n,20000p,200000b,200000s
 <C:/Users/Korisnik/AppData/Local/Programs/MiKTeX/fonts/type1/urw/courier/ucrb8a.pfb><C:/Users/Korisnik/AppData/Local/Programs/MiKTeX/fonts/type1/urw/courier/ucrr8a.pfb><C:/Users/Korisnik/AppData/Local/Programs/MiKTeX/fonts/type1/urw/helvetic/uhvb8a.pfb><C:/Users/Korisnik/AppData/Local/Programs/MiKTeX/fonts/type1/urw/helvetic/uhvr8a.pfb><C:/Users/Korisnik/AppData/Local/Programs/MiKTeX/fonts/type1/urw/helvetic/uhvro8a.pfb>
-Output written on rad.pdf (25 pages, 178751 bytes).
+Output written on rad.pdf (25 pages, 183014 bytes).
 PDF statistics:
- 385 PDF objects out of 1000 (max. 8388607)
+ 391 PDF objects out of 1000 (max. 8388607)
  76 named destinations out of 1000 (max. 500000)
  336 words of extra memory for PDF output out of 10000 (max. 10000000)
 

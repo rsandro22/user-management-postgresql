@@ -38,7 +38,7 @@
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{howpublished}{\url{https://www.postgresql.org/docs/}}
-      \field{note}{Accessed: 2026-01-10}
+      \field{note}{Pogledano: 14.01.2026.}
       \field{title}{PostgreSQL Documentation}
       \field{year}{2023}
     \endentry
@@ -69,7 +69,7 @@
       \field{title}{Flask Web Development}
       \field{year}{2018}
     \endentry
-    \entry{elmasri2016fundamentals}{book}{}{}
+    \entry{elmasri2016fundamentals}{misc}{}{}
       \name{author}{2}{}{%
         {{hash=c7e2fe1a0e649bf469f3feb7c5aa840d}{%
            family={Elmasri},
@@ -81,12 +81,6 @@
            familyi={N\bibinitperiod},
            given={Shamkant\bibnamedelima B.},
            giveni={S\bibinitperiod\bibinitdelim B\bibinitperiod}}}%
-      }
-      \list{location}{1}{%
-        {Boston}%
-      }
-      \list{publisher}{1}{%
-        {Pearson}%
       }
       \strng{namehash}{2e8829be23557c692dac07b198a7df6e}
       \strng{fullhash}{2e8829be23557c692dac07b198a7df6e}
@@ -101,10 +95,12 @@
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{edition}{7}
+      \field{howpublished}{\url{https://books.google.ba/books?id=Me_3DwAAQBAJ}}
+      \field{note}{Pogledano: 15.01.2026.}
       \field{title}{Fundamentals of Database Systems}
       \field{year}{2016}
     \endentry
-    \entry{sandhu1996rolebased}{article}{}{}
+    \entry{sandhu1996rolebased}{misc}{}{}
       \name{author}{4}{}{%
         {{hash=f3b7d57399ba1dbf13fcbf28b2ad7555}{%
            family={Sandhu},
@@ -139,38 +135,35 @@
       \field{sortinithash}{9381316451d1b9788675a07e972a12a7}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
-      \field{journaltitle}{IEEE Computer}
-      \field{number}{2}
+      \field{howpublished}{\url{https://ieeexplore.ieee.org/abstract/document/367293}}
+      \field{note}{Pogledano: 16.01.2026.}
       \field{title}{Role-Based Access Control Models}
-      \field{volume}{29}
       \field{year}{1996}
-      \field{pages}{38\bibrangedash 47}
-      \range{pages}{10}
     \endentry
-    \entry{behl2017cybersecurity}{book}{}{}
+    \entry{stallings2017security}{misc}{}{}
       \name{author}{1}{}{%
-        {{hash=dfe82f459a8f16cd175db216b0636ef0}{%
-           family={Behl},
-           familyi={B\bibinitperiod},
-           given={Abhijit},
-           giveni={A\bibinitperiod}}}%
+        {{hash=0599c551bf066f66e0e9c44815384cb4}{%
+           family={Stallings},
+           familyi={S\bibinitperiod},
+           given={William},
+           giveni={W\bibinitperiod}}}%
       }
-      \list{publisher}{1}{%
-        {Oxford University Press}%
-      }
-      \strng{namehash}{dfe82f459a8f16cd175db216b0636ef0}
-      \strng{fullhash}{dfe82f459a8f16cd175db216b0636ef0}
-      \strng{fullhashraw}{dfe82f459a8f16cd175db216b0636ef0}
-      \strng{bibnamehash}{dfe82f459a8f16cd175db216b0636ef0}
-      \strng{authorbibnamehash}{dfe82f459a8f16cd175db216b0636ef0}
-      \strng{authornamehash}{dfe82f459a8f16cd175db216b0636ef0}
-      \strng{authorfullhash}{dfe82f459a8f16cd175db216b0636ef0}
-      \strng{authorfullhashraw}{dfe82f459a8f16cd175db216b0636ef0}
+      \strng{namehash}{0599c551bf066f66e0e9c44815384cb4}
+      \strng{fullhash}{0599c551bf066f66e0e9c44815384cb4}
+      \strng{fullhashraw}{0599c551bf066f66e0e9c44815384cb4}
+      \strng{bibnamehash}{0599c551bf066f66e0e9c44815384cb4}
+      \strng{authorbibnamehash}{0599c551bf066f66e0e9c44815384cb4}
+      \strng{authornamehash}{0599c551bf066f66e0e9c44815384cb4}
+      \strng{authorfullhash}{0599c551bf066f66e0e9c44815384cb4}
+      \strng{authorfullhashraw}{0599c551bf066f66e0e9c44815384cb4}
       \field{sortinit}{5}
       \field{sortinithash}{20e9b4b0b173788c5dace24730f47d8c}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
-      \field{title}{Cybersecurity and Cyberwar}
+      \field{edition}{6}
+      \field{howpublished}{\url{https://api.pageplace.de/preview/DT0400.9781292154916_A37747529/preview-9781292154916_A37747529.pdf}}
+      \field{note}{Pogledano: 18.01.2026.}
+      \field{title}{Network Security Essentials: Applications and Standards}
       \field{year}{2017}
     \endentry
   \enddatalist
